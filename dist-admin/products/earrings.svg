@@ -1,0 +1,12 @@
+<svg width="800" height="620" viewBox="0 0 800 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="620" rx="48" fill="#171217"/>
+  <circle cx="270" cy="192" r="24" fill="#E3B973"/>
+  <circle cx="530" cy="192" r="24" fill="#E3B973"/>
+  <path d="M270 192V286" stroke="#E3B973" stroke-width="14" stroke-linecap="round"/>
+  <path d="M530 192V286" stroke="#E3B973" stroke-width="14" stroke-linecap="round"/>
+  <path d="M270 302L314 358L270 414L226 358L270 302Z" fill="#FFF7EC" stroke="#E3B973" stroke-width="10"/>
+  <path d="M530 302L574 358L530 414L486 358L530 302Z" fill="#FFF7EC" stroke="#E3B973" stroke-width="10"/>
+  <circle cx="270" cy="358" r="18" fill="#E3B973"/>
+  <circle cx="530" cy="358" r="18" fill="#E3B973"/>
+  <text x="92" y="560" fill="#F4E2BD" font-family="Georgia, serif" font-size="40">Solstice Diamond Studs</text>
+</svg>

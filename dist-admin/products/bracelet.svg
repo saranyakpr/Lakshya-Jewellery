@@ -1,0 +1,14 @@
+<svg width="800" height="620" viewBox="0 0 800 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="620" rx="48" fill="#191316"/>
+  <ellipse cx="400" cy="300" rx="194" ry="122" stroke="#E3B973" stroke-width="18"/>
+  <ellipse cx="400" cy="300" rx="150" ry="88" stroke="#6E5339" stroke-width="8" stroke-dasharray="4 18"/>
+  <circle cx="230" cy="300" r="18" fill="#FFF7EC"/>
+  <circle cx="285" cy="390" r="18" fill="#E3B973"/>
+  <circle cx="400" cy="424" r="22" fill="#FFF7EC"/>
+  <circle cx="515" cy="390" r="18" fill="#E3B973"/>
+  <circle cx="570" cy="300" r="18" fill="#FFF7EC"/>
+  <circle cx="515" cy="210" r="18" fill="#E3B973"/>
+  <circle cx="400" cy="176" r="22" fill="#FFF7EC"/>
+  <circle cx="285" cy="210" r="18" fill="#E3B973"/>
+  <text x="130" y="560" fill="#F4E2BD" font-family="Georgia, serif" font-size="40">Meher Polki Bracelet</text>
+</svg>
