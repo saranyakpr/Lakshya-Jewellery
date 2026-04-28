@@ -225,7 +225,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3">
+              {/* <div className="flex flex-wrap items-center gap-3">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/74 px-3 py-2 text-sm text-[var(--color-muted-strong)]">
                   <span className="h-2 w-2 rounded-full bg-[var(--color-accent)]" />
                   <span className="font-semibold text-[var(--color-heading)]">{currentSection.label}</span>
@@ -239,7 +239,7 @@ function App() {
                 >
                   Open Admin Panel
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col gap-3 border-t border-[rgba(169,105,89,0.12)] pt-4 lg:flex-row lg:items-center lg:justify-between">
