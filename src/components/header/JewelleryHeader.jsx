@@ -49,18 +49,24 @@ function ServicesButton({ label }) {
   )
 }
 
-function MobileTopRow({ brand, primaryAction, serviceLabel }) {
+function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder }) {
   return (
     <div className="flex flex-col gap-3 lg:hidden">
-      <div className="flex items-center justify-between gap-3">
-        <LogoMark name={brand.name} subtitle={brand.subtitle} />
-        <div className="flex flex-wrap items-center justify-end gap-2">
-          <HeaderButton>
-            <GiftIcon className="size-4" />
-            <span>{primaryAction}</span>
-          </HeaderButton>
-          <ServicesButton label={serviceLabel} />
+      <div className="flex items-center gap-3">
+        <div className="flex-shrink-0">
+          <LogoMark />
         </div>
+        <div className="flex-1 min-w-0">
+          <HeaderSearch placeholder={searchPlaceholder} />
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <HeaderButton>
+          <GiftIcon className="size-4" />
+          <span>{primaryAction}</span>
+        </HeaderButton>
+        <ServicesButton label={serviceLabel} />
       </div>
     </div>
   )
@@ -132,9 +138,9 @@ function JewelleryHeader({
     <header className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm">
       <div className="flex flex-col gap-4 px-4 py-4 sm:px-5 lg:px-6">
         <MobileTopRow
-          brand={brand}
           primaryAction={primaryAction}
           serviceLabel={serviceLabel}
+          searchPlaceholder={searchPlaceholder}
         />
 
         <DesktopTopRow
@@ -144,10 +150,6 @@ function JewelleryHeader({
           searchPlaceholder={searchPlaceholder}
           serviceLabel={serviceLabel}
         />
-
-        <div className="w-full lg:hidden">
-          <HeaderSearch placeholder={searchPlaceholder} />
-        </div>
 
         <MobileActionRow actions={actions} />
       </div>
