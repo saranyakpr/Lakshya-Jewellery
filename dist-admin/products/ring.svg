@@ -1,9 +1,0 @@
-<svg width="800" height="620" viewBox="0 0 800 620" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="620" rx="48" fill="#161114"/>
-  <circle cx="400" cy="324" r="132" stroke="#E3B973" stroke-width="26"/>
-  <circle cx="400" cy="324" r="78" stroke="#6E5339" stroke-width="8" stroke-dasharray="8 14"/>
-  <path d="M400 118L440 184L400 250L360 184L400 118Z" fill="#FFF7EC" stroke="#E3B973" stroke-width="12"/>
-  <path d="M400 134L424 184L400 234L376 184L400 134Z" fill="#FFFFFF"/>
-  <circle cx="400" cy="184" r="16" fill="#E3B973"/>
-  <text x="175" y="560" fill="#F4E2BD" font-family="Georgia, serif" font-size="40">Noor Solitaire Ring</text>
-</svg>

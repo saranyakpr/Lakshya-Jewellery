@@ -1,65 +1,30 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Segoe UI", "Inter Tight", "Trebuchet MS", sans-serif;
-  --font-display: "Georgia", "Times New Roman", serif;
-}
-
 :root {
-  --color-ink: #fff7f5;
-  --color-surface: #fffaf7;
-  --color-card: rgba(255, 255, 255, 0.86);
-  --color-card-soft: rgba(242, 210, 202, 0.36);
-  --color-line: rgba(168, 107, 92, 0.12);
-  --color-line-strong: rgba(168, 107, 92, 0.24);
-  --color-text: #3b261f;
-  --color-heading: #2f1915;
-  --color-muted: rgba(59, 38, 31, 0.62);
-  --color-muted-strong: rgba(59, 38, 31, 0.78);
-  --color-gold: #d7a86e;
-  --color-gold-light: #f5dcbc;
-  --color-accent: #a96959;
-  --color-accent-strong: #8e5648;
-  --color-soft: #fbe8e1;
-  --color-danger: #d05b5b;
-  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  min-width: 320px;
-  font-family: var(--font-sans);
-  background:
-    radial-gradient(circle at top, rgba(235, 171, 151, 0.24), transparent 24%),
-    radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.82), transparent 18%),
-    linear-gradient(180deg, #fff9f7 0%, #fff4ef 44%, #fcebe4 100%);
-  color: var(--color-text);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background: #f3f3f3;
+  color: #111827;
 }
 
 button,
-input,
-textarea {
+input {
   font: inherit;
 }
 
 #root {
   min-height: 100vh;
-}
-
-::selection {
-  background: rgba(169, 105, 89, 0.18);
-  color: var(--color-heading);
 }
