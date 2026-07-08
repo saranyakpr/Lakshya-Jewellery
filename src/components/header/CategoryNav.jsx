@@ -7,16 +7,18 @@ function CategoryNav({ items }) {
           key={item.label}
           type="button"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f5eaf3] text-[#7a1f67] shadow-sm transition group-hover:scale-105 sm:h-14 sm:w-14">
-            {item.icon ? (
+          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f5eaf3] text-[#7a1f67] shadow-sm transition group-hover:scale-105 sm:h-14 sm:w-14 cursor-pointer">
+            {item.image ? (
+              <img
+                className="h-8 w-8 rounded-full object-contain sm:h-13 sm:w-13"
+                src={item.image}
+                alt={item.label}
+              />
+            ) : item.icon ? (
               <span className="text-xl leading-none sm:text-2xl">{item.icon}</span>
-            ) : (
-              <span className="text-[9px] font-semibold uppercase tracking-[0.2em] sm:text-[10px]">
-                {item.monogram ?? 'LJ'}
-              </span>
-            )}
+            ) : null}
           </span>
-          <span className="max-w-20 text-[11px] font-medium leading-4 sm:max-w-24 sm:text-xs">{item.label}</span>
+          <span className="max-w-20 text-[11px] font-semibold leading-4 sm:max-w-24 sm:text-xs">{item.label}</span>
         </button>
       ))}
     </div>

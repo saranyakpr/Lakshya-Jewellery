@@ -13,6 +13,8 @@ import {
 import HeaderSearch from './HeaderSearch'
 import PromoStrip from './PromoStrip'
 import logo from '../../assets/img/logo.png'
+import ringIcon from '../../assets/img/ring.png'
+import earring from '../../assets/img/earring.jpg'
 
 function LogoMark() {
   return (
@@ -175,10 +177,11 @@ export function buildHeaderProps() {
       { label: 'Bag', icon: <BagIcon className="size-5" />, badge: 0 },
     ],
     promoItems: [
-      { text: 'Your first order - Use code: WELCOME10' },
-      { text: 'Free shipping on orders above Rs. 999 across India', icon: '🚚' },
+      { title: 'Your first order', text: 'Use code: WELCOME10' },
+      { title: 'Free shipping', text: 'on orders above Rs. 999 across India', icon: '🚚' },
       {
-        text: 'BIS Hallmarked jewellery - Certified purity guaranteed',
+        title: 'BIS Hallmarked jewellery',
+        text: 'Certified purity guaranteed',
         icon: <DiamondIcon className="size-4" />,
       },
       {
@@ -187,17 +190,17 @@ export function buildHeaderProps() {
       },
     ],
     categories: [
-      { label: 'Rings', monogram: 'LJ' },
-      { label: 'Earrings', monogram: 'LJ' },
-      { label: 'Silver by Shayq', monogram: 'LJ' },
-      { label: 'Gifting', monogram: 'LJ' },
-      { label: 'Mangalsutras', monogram: 'LJ' },
-      { label: 'Necklaces', monogram: 'LJ' },
-      { label: "Men's Jewellery", icon: '🎁' },
+      { label: 'Rings', image: ringIcon },
+      { label: 'Earrings', image: earring },
+      { label: 'Silver by Shayq', image: logo },
+      { label: 'Gifting', icon: '🎁' },
+      { label: 'Mangalsutras', image: logo },
+      { label: 'Necklaces', image: logo },
+      { label: "Men's Jewellery", image: logo },
       { label: 'Kids Jewellery', icon: '👧' },
-      { label: 'Solitaires', monogram: 'LJ' },
-      { label: 'Bracelets & Bangles', monogram: 'LJ' },
-      { label: 'More Jewellery', monogram: 'LJ' },
+      { label: 'Solitaires', image: logo },
+      { label: 'Bracelets & Bangles', image: logo },
+      { label: 'More Jewellery', image: logo },
     ],
     serviceLabel: 'Services',
   }
