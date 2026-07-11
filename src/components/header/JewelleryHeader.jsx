@@ -15,6 +15,7 @@ import PromoStrip from './PromoStrip'
 import logo from '../../assets/img/logo.png'
 import ringIcon from '../../assets/img/ring.png'
 import earring from '../../assets/img/earring.jpg'
+import diamond from '../../assets/img/diamond.png'
 
 function LogoMark() {
   return (
@@ -182,7 +183,7 @@ export function buildHeaderProps() {
       {
         title: 'BIS Hallmarked jewellery',
         text: 'Certified purity guaranteed',
-        icon: <DiamondIcon className="size-4" />,
+        icon: <img src={diamond} alt="BIS Hallmarked" className="h-3 w-3" />,
       },
       {
         text: 'Easy 30-day returns & hassle-free exchange',
