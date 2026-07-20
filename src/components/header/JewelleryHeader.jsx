@@ -84,11 +84,11 @@ function DesktopTopRow({
 }) {
   return (
     <div className="hidden items-center justify-between gap-4 lg:flex">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-1 min-w-0 items-center gap-4">
         <div className="flex-shrink-0">
           <LogoMark name={brand.name} subtitle={brand.subtitle} />
         </div>
-        <div className="min-w-0 w-full max-w-[420px]">
+        <div className="min-w-0 flex-1">
           <HeaderSearch placeholder={searchPlaceholder} />
         </div>
       </div>
