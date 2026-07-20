@@ -32,7 +32,7 @@ function LogoMark() {
 function HeaderButton({ children }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded-md bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
+      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
       type="button"
     >
       {children}
@@ -43,7 +43,7 @@ function HeaderButton({ children }) {
 function ServicesButton({ label }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded-md bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
+      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
       type="button"
     >
       <span>{label}</span>
@@ -140,7 +140,7 @@ function JewelleryHeader({
 }) {
   return (
     <header className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm">
-      <div className="flex flex-col gap-4 px-4 py-4 sm:px-5 lg:px-6">
+      <div className="flex flex-col gap-4 px-2 py-2 sm:px-5 lg:px-6">
         <MobileTopRow
           primaryAction={primaryAction}
           serviceLabel={serviceLabel}
