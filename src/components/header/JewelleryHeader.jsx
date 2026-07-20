@@ -83,21 +83,22 @@ function DesktopTopRow({
   serviceLabel,
 }) {
   return (
-    <div className="hidden items-center justify-between gap-6 lg:flex">
-      <div className="flex-shrink-0">
-        <LogoMark name={brand.name} subtitle={brand.subtitle} />
+    <div className="hidden items-center justify-between gap-4 lg:flex">
+      <div className="flex items-center gap-4">
+        <div className="flex-shrink-0">
+          <LogoMark name={brand.name} subtitle={brand.subtitle} />
+        </div>
+        <div className="min-w-0 w-full max-w-[420px]">
+          <HeaderSearch placeholder={searchPlaceholder} />
+        </div>
       </div>
 
-      <div className="flex-1 max-w-2xl">
-        <HeaderSearch placeholder={searchPlaceholder} />
-      </div>
-
-      <div className="flex flex-shrink-0 items-center gap-3">
+      <div className="flex flex-shrink-0 items-center gap-4">
         <HeaderButton>
           <GiftIcon className="size-4" />
           <span>{primaryAction}</span>
         </HeaderButton>
-        <div className="flex items-start gap-5">
+        <div className="flex items-center gap-4">
           {actions.map((action) => (
             <HeaderAction
               badge={action.badge}
