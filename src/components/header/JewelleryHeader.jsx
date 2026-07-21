@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import CategoryNav from './CategoryNav'
 import HeaderAction from './HeaderAction'
 import {
@@ -16,13 +17,13 @@ import { categories } from '../../data/categories'
 
 function LogoMark() {
   return (
-    <div className="flex items-center text-[#b31c62]">
+    <Link className="flex items-center text-[#b31c62]" to="/">
       <img
         alt="Lakshya Jewellery logo"
         className="h-10 w-auto shrink-0 sm:h-12 lg:h-18"
         src={logo}
       />
-    </div>
+    </Link>
   )
 }
 
