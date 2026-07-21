@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import CategoryNav from './CategoryNav'
 import HeaderAction from './HeaderAction'
 import {
@@ -129,6 +130,15 @@ function JewelleryHeader({
   categories,
   serviceLabel,
 }) {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <header className="sticky top-0 z-50 border-b border-[#e8e0e8] bg-white">
       <div className="flex flex-col gap-4 px-2 py-2 sm:px-5 lg:px-6">
@@ -148,7 +158,13 @@ function JewelleryHeader({
         />
       </div>
 
-      <PromoStrip items={promoItems} />
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          isScrolled ? 'max-h-0 opacity-0' : 'max-h-24 opacity-100'
+        }`}
+      >
+        <PromoStrip items={promoItems} />
+      </div>
       <CategoryNav items={categories} />
     </header>
   )
