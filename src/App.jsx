@@ -13,6 +13,7 @@ import TrialOptions from './components/TrialOptions'
 import GoldServiceFeatures from './components/GoldServiceFeatures'
 import Expressions from './components/Expressions'
 import JoinInsider from './components/JoinInsider'
+import Footer from './components/Footer'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <GoldServiceFeatures />
         <Expressions />
         <JoinInsider />
+        <Footer />
       </div>
     </main>
   )

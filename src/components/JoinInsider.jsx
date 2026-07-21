@@ -19,7 +19,11 @@ function JoinInsider() {
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-6">
               {genderOptions.map((option) => (
-                <label className="flex items-center gap-2 text-sm text-white" key={option}>
+                <label
+                  className="gap-2 text-sm text-white"
+                  key={option}
+                  style={{ display: 'flex', alignItems: 'center' }}
+                >
                   <input
                     checked={gender === option}
                     className="h-5 w-5 accent-white"
