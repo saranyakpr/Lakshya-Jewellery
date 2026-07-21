@@ -130,7 +130,7 @@ function JewelleryHeader({
   serviceLabel,
 }) {
   return (
-    <header className="border-b border-[#e8e0e8] bg-white">
+    <header className="sticky top-0 z-50 border-b border-[#e8e0e8] bg-white">
       <div className="flex flex-col gap-4 px-2 py-2 sm:px-5 lg:px-6">
         <MobileTopRow
           actions={actions}
