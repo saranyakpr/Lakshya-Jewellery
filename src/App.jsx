@@ -4,6 +4,8 @@ import FeatureSection from './components/FeatureSection'
 import PromoBanners from './components/PromoBanners'
 import TrustBadges from './components/TrustBadges'
 import TreasureChestBanners from './components/TreasureChestBanners'
+import LakshyaCollections from './components/LakshyaCollections'
+import QuickCategoryLinks from './components/QuickCategoryLinks'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <PromoBanners />
         <TrustBadges />
         <TreasureChestBanners />
+        <LakshyaCollections />
+        <QuickCategoryLinks />
       </div>
     </main>
   )
