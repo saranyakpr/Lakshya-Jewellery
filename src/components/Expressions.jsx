@@ -15,11 +15,11 @@ const photos = [
 function Expressions() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <h2 className="mb-8 text-center font-serif text-3xl text-[#4f3267] sm:text-4xl">
-        Expressions
+      <h2 className="mb-8 text-center font-serif text-3xl !text-[#4F3267] sm:text-4xl">
+        Lakshya Expressions
       </h2>
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="grid mt-[2rem] grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         {photos.map((photo) => (
           <img
             alt={photo.alt}
@@ -32,7 +32,8 @@ function Expressions() {
 
       <div className="mt-8 flex justify-center">
         <button
-          className="rounded border border-slate-200 bg-white px-8 py-3 text-sm font-semibold uppercase tracking-wide text-[#4f3267] shadow-sm transition hover:bg-slate-50"
+          className="bg-[#4f3267] px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#3c2650]"
+          style={{ borderRadius: '9999px' }}
           type="button"
         >
           Share Your Story
