@@ -12,6 +12,7 @@ import {
 import HeaderSearch from './HeaderSearch'
 import PromoStrip from './PromoStrip'
 import logo from '../../assets/img/logo.png'
+import { categories } from '../../data/categories'
 
 function LogoMark() {
   return (
@@ -191,19 +192,7 @@ export function buildHeaderProps() {
       { icon: '🔄', title: 'Easy 30-day returns', text: '& hassle-free exchange policy' },
       { icon: '✨', title: 'Try At Home', text: 'available in 60+ cities across India' },
     ],
-    categories: [
-      { label: 'Rings' },
-      { label: 'Earrings' },
-      { label: 'Bracelets & Bangles' },
-      { label: 'Solitaires' },
-      { label: 'Mangalsutras' },
-      { label: 'Necklaces & Pendants' },
-      { label: 'Silver by Shaya' },
-      { label: 'Gifting' },
-      { label: 'Collections' },
-      { label: 'More Jewellery' },
-      { label: 'Trending' },
-    ],
+    categories,
     serviceLabel: 'Services',
   }
 }

@@ -1,43 +1,16 @@
-import HomeCarousel from './components/Carousel/HomeCarousel'
-import JewelleryHeader from './components/header/JewelleryHeader'
-import FeatureSection from './components/FeatureSection'
-import PromoBanners from './components/PromoBanners'
-import TrustBadges from './components/TrustBadges'
-import TreasureChestBanners from './components/TreasureChestBanners'
-import LakshyaCollections from './components/LakshyaCollections'
-import QuickCategoryLinks from './components/QuickCategoryLinks'
-import EverydayGoldSection from './components/EverydayGoldSection'
-import SpotlightCards from './components/SpotlightCards'
-import FindStoreNearby from './components/FindStoreNearby'
-import TrialOptions from './components/TrialOptions'
-import GoldServiceFeatures from './components/GoldServiceFeatures'
-import Expressions from './components/Expressions'
-import JoinInsider from './components/JoinInsider'
-import Footer from './components/Footer'
-import { headerContent } from './data/headerContent'
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import CategoryPage from './pages/CategoryPage'
 
 function App() {
   return (
-    <main className="min-h-screen bg-[#f3f3f3]">
-      <div className="mx-auto">
-        <JewelleryHeader {...headerContent} />
-        <HomeCarousel />
-        <FeatureSection />
-        <PromoBanners />
-        <TrustBadges />
-        <TreasureChestBanners />
-        <LakshyaCollections />
-        <QuickCategoryLinks />
-        <EverydayGoldSection />
-        <SpotlightCards />
-        <FindStoreNearby />
-        <TrialOptions />
-        <GoldServiceFeatures />
-        <Expressions />
-        <JoinInsider />
-        <Footer />
-      </div>
-    </main>
+    <Routes>
+      <Route element={<Layout />} path="/">
+        <Route index element={<HomePage />} />
+        <Route element={<CategoryPage />} path="category/:slug" />
+      </Route>
+    </Routes>
   )
 }
 
