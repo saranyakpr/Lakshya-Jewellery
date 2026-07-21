@@ -7,6 +7,7 @@ function CategoryNav({ items }) {
         <Link
           className="shrink-0 whitespace-nowrap text-sm text-white transition hover:text-white/80 sm:text-base"
           key={item.label}
+          style={{ textDecoration: 'none' }}
           to={`/category/${item.slug}`}
         >
           {item.label}
