@@ -22,7 +22,7 @@ function LogoMark() {
     <div className="flex items-center text-[#b31c62]">
       <img
         alt="Lakshya Jewellery logo"
-        className="h-10 w-auto shrink-0 sm:h-12 lg:h-14"
+        className="h-10 w-auto shrink-0 sm:h-12 lg:h-18"
         src={logo}
       />
     </div>
@@ -32,7 +32,7 @@ function LogoMark() {
 function HeaderButton({ children }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
+      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-sm font-semibold text-white transition hover:bg-[#671756] sm:h-10 sm:px-5 sm:text-base"
       type="button"
     >
       {children}
@@ -43,7 +43,7 @@ function HeaderButton({ children }) {
 function ServicesButton({ label }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-xs font-semibold text-white transition hover:bg-[#671756] sm:h-11 sm:px-5 sm:text-sm"
+      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-sm font-semibold text-white transition hover:bg-[#671756] sm:h-10 sm:px-5 sm:text-base"
       type="button"
     >
       <span>{label}</span>
@@ -52,7 +52,7 @@ function ServicesButton({ label }) {
   )
 }
 
-function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder }) {
+function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions }) {
   return (
     <div className="flex flex-col gap-3 lg:hidden">
       <div className="flex items-center gap-3">
@@ -64,12 +64,23 @@ function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder }) {
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2 px-1">
         <HeaderButton>
           <GiftIcon className="size-4" />
           <span>{primaryAction}</span>
         </HeaderButton>
         <ServicesButton label={serviceLabel} />
+
+        <div className="flex flex-wrap items-center gap-2">
+          {actions.map((action) => (
+            <HeaderAction
+              badge={action.badge}
+              icon={action.icon}
+              key={action.label}
+              label={action.label}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -98,7 +109,7 @@ function DesktopTopRow({
           <GiftIcon className="size-4" />
           <span>{primaryAction}</span>
         </HeaderButton>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           {actions.map((action) => (
             <HeaderAction
               badge={action.badge}
@@ -110,21 +121,6 @@ function DesktopTopRow({
         </div>
         <ServicesButton label={serviceLabel} />
       </div>
-    </div>
-  )
-}
-
-function MobileActionRow({ actions }) {
-  return (
-    <div className="-mx-1 flex gap-3 overflow-x-auto px-1 lg:hidden [&::-webkit-scrollbar]:hidden">
-      {actions.map((action) => (
-        <HeaderAction
-          badge={action.badge}
-          icon={action.icon}
-          key={action.label}
-          label={action.label}
-        />
-      ))}
     </div>
   )
 }
@@ -142,6 +138,7 @@ function JewelleryHeader({
     <header className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm">
       <div className="flex flex-col gap-4 px-2 py-2 sm:px-5 lg:px-6">
         <MobileTopRow
+          actions={actions}
           primaryAction={primaryAction}
           serviceLabel={serviceLabel}
           searchPlaceholder={searchPlaceholder}
@@ -154,8 +151,6 @@ function JewelleryHeader({
           searchPlaceholder={searchPlaceholder}
           serviceLabel={serviceLabel}
         />
-
-        <MobileActionRow actions={actions} />
       </div>
 
       <PromoStrip items={promoItems} />

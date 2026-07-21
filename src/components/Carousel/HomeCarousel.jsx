@@ -4,11 +4,11 @@ import carouselImage from '../../assets/img/carousel.png'
 
 const HomeCarousel = () => {
   return (
-    <div className="mx-auto max-w-full">
+    <div className="mx-auto max-w-full p-4">
       <Carousel>
         <Carousel.Item interval={3000}>
           <img
-            className="d-block w-100 h-[320px] object-cover sm:h-[420px]"
+            className="d-block w-100 h-[320px] object-cover sm:h-[420px] rounded-xl"
             src={carouselImage}
             alt="First slide"
           />
@@ -19,7 +19,7 @@ const HomeCarousel = () => {
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <img
-            className="d-block w-100 h-[320px] object-cover sm:h-[420px]"
+            className="d-block w-100 h-[320px] object-cover sm:h-[420px] rounded-xl"
             src={carouselImage}
             alt="Second slide"
           />
@@ -30,7 +30,7 @@ const HomeCarousel = () => {
         </Carousel.Item>
         <Carousel.Item interval={3000}>
           <img
-            className="d-block w-100 h-[320px] object-cover sm:h-[420px]"
+            className="d-block w-100 h-[320px] object-cover sm:h-[420px] rounded-xl"
             src={carouselImage}
             alt="Third slide"
           />

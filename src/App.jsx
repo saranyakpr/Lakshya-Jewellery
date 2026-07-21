@@ -1,5 +1,6 @@
 import HomeCarousel from './components/Carousel/HomeCarousel'
 import JewelleryHeader from './components/header/JewelleryHeader'
+import FeatureSection from './components/FeatureSection'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <main className="min-h-screen bg-[#f3f3f3]">
       <div className="mx-auto">
         <JewelleryHeader {...headerContent} />
-        <HomeCarousel/>
+        <HomeCarousel />
+        <FeatureSection />
       </div>
     </main>
   )
