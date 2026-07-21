@@ -39,7 +39,7 @@ function TrialOptions() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
         {cards.map((card) => (
           <div
-            className="flex items-center justify-between gap-4 rounded-2xl bg-[#f6f3f9] p-6 sm:p-8"
+            className="flex items-center justify-between gap-4 rounded-2xl bg-pink-100 p-6 sm:p-8"
             key={card.heading}
           >
             <div className="flex flex-col gap-4">

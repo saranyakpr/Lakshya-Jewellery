@@ -10,6 +10,7 @@ import EverydayGoldSection from './components/EverydayGoldSection'
 import SpotlightCards from './components/SpotlightCards'
 import FindStoreNearby from './components/FindStoreNearby'
 import TrialOptions from './components/TrialOptions'
+import GoldServiceFeatures from './components/GoldServiceFeatures'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <SpotlightCards />
         <FindStoreNearby />
         <TrialOptions />
+        <GoldServiceFeatures />
       </div>
     </main>
   )
