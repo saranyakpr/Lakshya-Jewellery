@@ -6,6 +6,7 @@ import TrustBadges from './components/TrustBadges'
 import TreasureChestBanners from './components/TreasureChestBanners'
 import LakshyaCollections from './components/LakshyaCollections'
 import QuickCategoryLinks from './components/QuickCategoryLinks'
+import EverydayGoldSection from './components/EverydayGoldSection'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <TreasureChestBanners />
         <LakshyaCollections />
         <QuickCategoryLinks />
+        <EverydayGoldSection />
       </div>
     </main>
   )
