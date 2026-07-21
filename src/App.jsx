@@ -3,6 +3,7 @@ import JewelleryHeader from './components/header/JewelleryHeader'
 import FeatureSection from './components/FeatureSection'
 import PromoBanners from './components/PromoBanners'
 import TrustBadges from './components/TrustBadges'
+import TreasureChestBanners from './components/TreasureChestBanners'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <FeatureSection />
         <PromoBanners />
         <TrustBadges />
+        <TreasureChestBanners />
       </div>
     </main>
   )
