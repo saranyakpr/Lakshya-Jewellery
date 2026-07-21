@@ -2,6 +2,7 @@ import HomeCarousel from './components/Carousel/HomeCarousel'
 import JewelleryHeader from './components/header/JewelleryHeader'
 import FeatureSection from './components/FeatureSection'
 import PromoBanners from './components/PromoBanners'
+import TrustBadges from './components/TrustBadges'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <HomeCarousel />
         <FeatureSection />
         <PromoBanners />
+        <TrustBadges />
       </div>
     </main>
   )
