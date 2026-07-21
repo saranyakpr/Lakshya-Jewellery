@@ -3,19 +3,14 @@ import HeaderAction from './HeaderAction'
 import {
   BagIcon,
   ChevronDownIcon,
-  DiamondIcon,
-  GiftIcon,
   HeartIcon,
   PinIcon,
-  ReturnIcon,
+  TryAtHomeIcon,
   UserIcon,
 } from './HeaderIcons'
 import HeaderSearch from './HeaderSearch'
 import PromoStrip from './PromoStrip'
 import logo from '../../assets/img/logo.png'
-import ringIcon from '../../assets/img/ring.png'
-import earring from '../../assets/img/earring.jpg'
-import diamond from '../../assets/img/diamond.png'
 
 function LogoMark() {
   return (
@@ -32,7 +27,7 @@ function LogoMark() {
 function HeaderButton({ children }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-sm font-semibold text-white transition hover:bg-[#671756] sm:h-10 sm:px-5 sm:text-base"
+      className="flex h-10 items-center gap-2 rounded bg-[#60195e] px-3 text-sm font-semibold text-white transition hover:bg-[#4f3267] sm:h-10 sm:px-5 sm:text-base"
       type="button"
     >
       {children}
@@ -43,7 +38,7 @@ function HeaderButton({ children }) {
 function ServicesButton({ label }) {
   return (
     <button
-      className="flex h-10 items-center gap-2 rounded bg-[#7a1f67] px-3 text-sm font-semibold text-white transition hover:bg-[#671756] sm:h-10 sm:px-5 sm:text-base"
+      className="flex h-10 items-center gap-2 rounded border border-[#d9d9d9] bg-[#60195e] px-3 text-sm font-semibold text-white transition hover:bg-[#4f3267] sm:h-10 sm:px-5 sm:text-base"
       type="button"
     >
       <span>{label}</span>
@@ -66,7 +61,7 @@ function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions 
 
       <div className="flex flex-wrap items-center gap-2 px-1">
         <HeaderButton>
-          <GiftIcon className="size-4" />
+          <TryAtHomeIcon className="size-4" />
           <span>{primaryAction}</span>
         </HeaderButton>
         <ServicesButton label={serviceLabel} />
@@ -106,7 +101,7 @@ function DesktopTopRow({
 
       <div className="flex flex-shrink-0 items-center gap-4">
         <HeaderButton>
-          <GiftIcon className="size-4" />
+          <TryAtHomeIcon className="size-4" />
           <span>{primaryAction}</span>
         </HeaderButton>
         <div className="flex items-center gap-3">
@@ -135,7 +130,7 @@ function JewelleryHeader({
   serviceLabel,
 }) {
   return (
-    <header className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-sm">
+    <header className="border-b border-[#e8e0e8] bg-white">
       <div className="flex flex-col gap-4 px-2 py-2 sm:px-5 lg:px-6">
         <MobileTopRow
           actions={actions}
@@ -174,27 +169,21 @@ export function buildHeaderProps() {
       { label: 'Bag', icon: <BagIcon className="size-5" />, badge: 0 },
     ],
     promoItems: [
-      { title: 'Your first order', text: 'Use code: WELCOME10' },
-      { title: 'Free shipping', text: 'on orders above Rs. 999 across India', icon: '🚚' },
-      {
-        title: 'BIS Hallmarked jewellery',
-        text: 'Certified purity guaranteed',
-        icon: <img src={diamond} alt="BIS Hallmarked" className="h-3 w-3" />,
-      },
-      {
-        text: 'Easy 30-day returns & hassle-free exchange',
-        icon: <ReturnIcon className="size-4" />,
-      },
+      { icon: '🎁', title: 'Get 10% off on your first order', text: '— Use code: WELCOME10' },
+      { icon: '🚚', title: 'Free shipping', text: 'on orders above ₹999 across India' },
+      { icon: '💎', title: 'BIS Hallmarked', text: 'jewellery — Certified purity guaranteed' },
+      { icon: '🔄', title: 'Easy 30-day returns', text: '& hassle-free exchange policy' },
+      { icon: '✨', title: 'Try At Home', text: 'available in 60+ cities across India' },
     ],
     categories: [
-      { label: 'Rings', image: ringIcon },
-      { label: 'Earrings', image: earring },
-      { label: 'Silver by Shayq', image: logo },
-      { label: 'Gifting', icon: '🎁' },
+      { label: 'Rings', image: logo },
+      { label: 'Earrings', image: logo },
+      { label: 'Silver by Shaya', image: logo },
+      { label: 'Gifting', image: logo },
       { label: 'Mangalsutras', image: logo },
       { label: 'Necklaces', image: logo },
-      { label: "Men's Jewellery", image: logo },
-      { label: 'Kids Jewellery', icon: '👧' },
+      { label: "Men's Jewellery", icon: '👔' },
+      { label: 'Kids Jewellery', icon: '🧒' },
       { label: 'Solitaires', image: logo },
       { label: 'Bracelets & Bangles', image: logo },
       { label: 'More Jewellery', image: logo },

@@ -59,6 +59,16 @@ export function BagIcon(props) {
   )
 }
 
+export function TryAtHomeIcon(props) {
+  return (
+    <IconBase {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M10 8v8" />
+      <path d="M14 8v8" />
+    </IconBase>
+  )
+}
+
 export function ChevronDownIcon(props) {
   return (
     <IconBase {...props}>

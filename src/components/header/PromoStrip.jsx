@@ -1,6 +1,6 @@
 function PromoStrip({ items }) {
   return (
-    <div className="flex gap-5 overflow-x-auto bg-[#7a1f67] px-4 py-2 text-[11px] font-medium text-white sm:flex-wrap sm:justify-between sm:gap-x-6 sm:gap-y-2 sm:text-xs lg:px-6 [&::-webkit-scrollbar]:hidden">
+    <div className="flex gap-5 overflow-x-auto bg-[#60195e] px-4 py-1.5 text-[11px] font-medium text-white sm:gap-x-6 lg:px-6 [&::-webkit-scrollbar]:hidden">
       {items.map((item) => (
         <div
           className="flex shrink-0 items-center gap-2 whitespace-nowrap"
