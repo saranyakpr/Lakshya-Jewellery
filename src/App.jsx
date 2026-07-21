@@ -11,6 +11,7 @@ import SpotlightCards from './components/SpotlightCards'
 import FindStoreNearby from './components/FindStoreNearby'
 import TrialOptions from './components/TrialOptions'
 import GoldServiceFeatures from './components/GoldServiceFeatures'
+import Expressions from './components/Expressions'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <FindStoreNearby />
         <TrialOptions />
         <GoldServiceFeatures />
+        <Expressions />
       </div>
     </main>
   )
