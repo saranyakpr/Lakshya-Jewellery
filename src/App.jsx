@@ -7,6 +7,9 @@ import TreasureChestBanners from './components/TreasureChestBanners'
 import LakshyaCollections from './components/LakshyaCollections'
 import QuickCategoryLinks from './components/QuickCategoryLinks'
 import EverydayGoldSection from './components/EverydayGoldSection'
+import SpotlightCards from './components/SpotlightCards'
+import FindStoreNearby from './components/FindStoreNearby'
+import TrialOptions from './components/TrialOptions'
 import { headerContent } from './data/headerContent'
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
         <LakshyaCollections />
         <QuickCategoryLinks />
         <EverydayGoldSection />
+        <SpotlightCards />
+        <FindStoreNearby />
+        <TrialOptions />
       </div>
     </main>
   )

@@ -9,16 +9,16 @@ const products = [
 function EverydayGoldSection() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-8 rounded-2xl bg-[#faf5ec] p-6 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-10 lg:p-12">
-        <div className="flex flex-col items-start gap-6">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-10">
+        <div className="flex flex-col items-start gap-6 rounded-2xl bg-[#4f3267] p-8 sm:p-10 lg:p-12">
           <div>
-            <h2 className="font-serif text-3xl text-[#4f3267] sm:text-4xl">Everyday 22KT Gold</h2>
-            <p className="mt-3 max-w-sm text-base text-slate-600">
+            <h2 className="font-serif text-3xl text-white sm:text-4xl">Everyday 22KT Gold</h2>
+            <p className="mt-3 max-w-sm text-base text-white/80">
               Timeless gold designs crafted for your daily elegance.
             </p>
           </div>
           <button
-            className="rounded border border-[#4f3267] px-8 py-3 text-sm font-medium uppercase tracking-wide text-[#4f3267] transition hover:bg-[#4f3267] hover:text-white"
+            className="rounded border border-white px-8 py-3 text-sm font-medium uppercase tracking-wide text-white transition hover:bg-white hover:text-[#4f3267]"
             type="button"
           >
             Explore All
