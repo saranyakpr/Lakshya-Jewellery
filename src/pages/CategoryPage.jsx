@@ -1,14 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { ChevronDownIcon, HeartIcon } from '../components/header/HeaderIcons'
 import { categories } from '../data/categories'
-import studEarrings from '../assets/img/image 27.png'
-import goldRing from '../assets/img/minimalist 22kt gold ring for women, delicate thin band.png'
-import butterflyImage from '../assets/img/collection-butterfly.png'
-import anantaImage from '../assets/img/collection-ananta.png'
-import leherImage from '../assets/img/collection-leher.png'
-import swirlImage from '../assets/img/collection-swirl.png'
-import ringsFlatlay from '../assets/img/ring.png'
-import engagementRing from '../assets/img/close up of hand wearing gold engagement ring, natural lighting.png'
+import { products } from '../data/products'
 
 const quickFilters = ['All', 'Fast Delivery', 'Latest Designs', 'Store Pickup', 'Try at Home']
 
@@ -32,56 +25,6 @@ const filterGroups = [
       { label: '₹5,001 - ₹10,000', count: 482 },
     ],
     more: '10 More',
-  },
-]
-
-const products = [
-  {
-    name: 'Bright Bloomy Diamond Stud Earrings',
-    price: '₹20,511',
-    original: '₹21,981',
-    image: studEarrings,
-    badge: 'Last Viewed',
-  },
-  {
-    name: 'Swirl Triangle Diamond Pendant',
-    price: '₹5,797',
-    original: '₹6,370',
-    image: anantaImage,
-  },
-  {
-    name: 'Sparkling Daisy Diamond Stud Earrings',
-    price: '₹22,889',
-    original: '₹24,362',
-    image: leherImage,
-  },
-  {
-    name: 'Swirl Blue Butterfly Diamond Pendant',
-    price: '₹47,683',
-    image: butterflyImage,
-  },
-  {
-    name: 'Ray Of Infinite Diamond Ring',
-    price: '₹14,282',
-    original: '₹15,207',
-    image: goldRing,
-  },
-  {
-    name: 'Classic Leaves Diamond Stud Earrings',
-    price: '₹46,262',
-    image: swirlImage,
-  },
-  {
-    name: 'Eternal 22KT Gold Hoop Earrings',
-    price: '₹56,996',
-    image: ringsFlatlay,
-    badge: 'Latest',
-  },
-  {
-    name: 'Mickey Mouse Enamel Earrings',
-    price: '₹13,821',
-    original: '₹14,548',
-    image: engagementRing,
   },
 ]
 
@@ -175,36 +118,38 @@ function CategoryPage() {
 
           <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
             {products.map((product) => (
-              <div key={product.name}>
-                <div className="relative aspect-square overflow-hidden rounded-lg bg-slate-50">
-                  <img
-                    alt={product.name}
-                    className="h-full w-full object-cover"
-                    src={product.image}
-                  />
-                  {product.badge ? (
-                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded bg-black/60 px-3 py-1 text-xs text-white">
-                      {product.badge}
-                    </span>
-                  ) : null}
-                  <button
-                    aria-label="Add to wishlist"
-                    className="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm transition hover:text-[#4f3267]"
-                    type="button"
-                  >
-                    <HeartIcon className="size-4" />
-                  </button>
-                </div>
-                <div className="mt-3 flex items-baseline gap-2">
-                  <span className="text-sm font-bold text-slate-900">{product.price}</span>
-                  {product.original ? (
-                    <span className="text-xs text-slate-400 line-through">
-                      {product.original}
-                    </span>
-                  ) : null}
-                </div>
-                <p className="mt-1 text-xs font-medium text-slate-500">Check Delivery Date</p>
-                <p className="mt-1 text-sm text-slate-600">{product.name}</p>
+              <div className="relative" key={product.slug}>
+                <Link className="block" to={`/product/${product.slug}`}>
+                  <div className="relative aspect-square overflow-hidden rounded-lg bg-slate-50">
+                    <img
+                      alt={product.name}
+                      className="h-full w-full object-cover"
+                      src={product.image}
+                    />
+                    {product.badge ? (
+                      <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded bg-black/60 px-3 py-1 text-xs text-white">
+                        {product.badge}
+                      </span>
+                    ) : null}
+                  </div>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    <span className="text-sm font-bold text-slate-900">{product.price}</span>
+                    {product.original ? (
+                      <span className="text-xs text-slate-400 line-through">
+                        {product.original}
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1 text-xs font-medium text-slate-500">Check Delivery Date</p>
+                  <p className="mt-1 text-sm text-slate-600">{product.name}</p>
+                </Link>
+                <button
+                  aria-label="Add to wishlist"
+                  className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm transition hover:text-[#4f3267]"
+                  type="button"
+                >
+                  <HeartIcon className="size-4" />
+                </button>
               </div>
             ))}
           </div>
