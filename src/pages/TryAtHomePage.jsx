@@ -1,5 +1,6 @@
 import JewelleryHeader from '../components/header/JewelleryHeader'
 import Footer from '../components/Footer'
+import BrowseDesignsSection from '../components/BrowseDesignsSection'
 import { headerContent } from '../data/headerContent'
 import tryAtHomeImage from '../assets/img/woman wearing multiple minimalist gold bangles, lifestyle shot.png'
 
@@ -75,21 +76,29 @@ const steps = [
     icon: HeartIcon,
     title: 'Pick Your Favourite Designs',
     text: 'Top five that stole your Heart',
+    bg: 'bg-purple-100',
+    color: 'text-purple-600',
   },
   {
     icon: CalendarIcon,
     title: 'Book Your Free Appointment',
     text: 'At your chosen place, date & time',
+    bg: 'bg-rose-100',
+    color: 'text-rose-500',
   },
   {
     icon: HomeIcon,
     title: 'Try On at Your Leisure',
     text: 'Let us bring the store to you',
+    bg: 'bg-sky-100',
+    color: 'text-sky-500',
   },
   {
     icon: BagIcon,
     title: 'Buy Only If You Love',
     text: "There's no compulsion to buy",
+    bg: 'bg-pink-100',
+    color: 'text-pink-500',
   },
 ]
 
@@ -130,22 +139,26 @@ function TryAtHomePage() {
         </section>
 
         <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <h2 className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+          <h2 className="text-center text-2xl font-bold !text-[#4f3267] sm:text-3xl">
             How it Works ?
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map(({ icon: Icon, title, text }) => (
+            {steps.map(({ icon: Icon, title, text, bg, color }) => (
               <div className="flex flex-col items-center text-center" key={title}>
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6f3f9] text-[#4f3267]">
+                <span
+                  className={`flex h-16 w-16 items-center justify-center rounded-2xl ${bg} ${color}`}
+                >
                   <Icon className="size-6" />
                 </span>
-                <h3 className="mt-5 text-sm font-bold text-slate-900">{title}</h3>
-                <p className="mt-2 text-xs text-slate-500">{text}</p>
+                <h3 className="mt-3 !text-sm !font-bold !text-[#000000ba]">{title}</h3>
+                <p className="text-xs text-slate-500">{text}</p>
               </div>
             ))}
           </div>
         </section>
+
+        <BrowseDesignsSection />
 
         <Footer />
       </div>
