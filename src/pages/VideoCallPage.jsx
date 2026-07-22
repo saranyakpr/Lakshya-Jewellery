@@ -5,6 +5,7 @@ import videoCallImage from '../assets/img/user generated photo of woman wearing 
 import badgeImage from '../assets/img/close up of hand wearing gold engagement ring, natural lighting.png'
 import VideoCallHowItWorksSection from '../components/VideoCallHowItWorksSection'
 import RequestFormSection from '../components/RequestFormSection'
+import SmartShoppingSection from '../components/SmartShoppingSection'
 
 function VideoCallPage() {
   return (
@@ -49,6 +50,8 @@ function VideoCallPage() {
         <VideoCallHowItWorksSection />
 
         <RequestFormSection />
+
+        <SmartShoppingSection />
 
         <Footer />
       </div>
