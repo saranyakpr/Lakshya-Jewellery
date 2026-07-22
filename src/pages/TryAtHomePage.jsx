@@ -1,6 +1,7 @@
 import JewelleryHeader from '../components/header/JewelleryHeader'
 import Footer from '../components/Footer'
 import BrowseDesignsSection from '../components/BrowseDesignsSection'
+import StoreExperienceSection from '../components/StoreExperienceSection'
 import { headerContent } from '../data/headerContent'
 import tryAtHomeImage from '../assets/img/woman wearing multiple minimalist gold bangles, lifestyle shot.png'
 
@@ -159,6 +160,8 @@ function TryAtHomePage() {
         </section>
 
         <BrowseDesignsSection />
+
+        <StoreExperienceSection />
 
         <Footer />
       </div>
