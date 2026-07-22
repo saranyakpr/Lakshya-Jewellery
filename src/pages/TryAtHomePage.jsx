@@ -3,6 +3,96 @@ import Footer from '../components/Footer'
 import { headerContent } from '../data/headerContent'
 import tryAtHomeImage from '../assets/img/woman wearing multiple minimalist gold bangles, lifestyle shot.png'
 
+function HeartIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z" />
+    </svg>
+  )
+}
+
+function CalendarIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <rect height="17" rx="2" width="18" x="3" y="4.5" />
+      <path d="M3 9.5h18M8 3v3M16 3v3" />
+    </svg>
+  )
+}
+
+function HomeIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M4 11.5 12 4l8 7.5" />
+      <path d="M6 10v9h12v-9" />
+    </svg>
+  )
+}
+
+function BagIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M6.5 8.5h11l-1 10h-9l-1-10Z" />
+      <path d="M9 9V7a3 3 0 0 1 6 0v2" />
+    </svg>
+  )
+}
+
+const steps = [
+  {
+    icon: HeartIcon,
+    title: 'Pick Your Favourite Designs',
+    text: 'Top five that stole your Heart',
+  },
+  {
+    icon: CalendarIcon,
+    title: 'Book Your Free Appointment',
+    text: 'At your chosen place, date & time',
+  },
+  {
+    icon: HomeIcon,
+    title: 'Try On at Your Leisure',
+    text: 'Let us bring the store to you',
+  },
+  {
+    icon: BagIcon,
+    title: 'Buy Only If You Love',
+    text: "There's no compulsion to buy",
+  },
+]
+
 function TryAtHomePage() {
   return (
     <main className="min-h-screen bg-[#f3f3f3]">
@@ -36,6 +126,24 @@ function TryAtHomePage() {
                 src={tryAtHomeImage}
               />
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <h2 className="text-center text-2xl font-bold text-slate-900 sm:text-3xl">
+            How it Works ?
+          </h2>
+
+          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map(({ icon: Icon, title, text }) => (
+              <div className="flex flex-col items-center text-center" key={title}>
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f6f3f9] text-[#4f3267]">
+                  <Icon className="size-6" />
+                </span>
+                <h3 className="mt-5 text-sm font-bold text-slate-900">{title}</h3>
+                <p className="mt-2 text-xs text-slate-500">{text}</p>
+              </div>
+            ))}
           </div>
         </section>
 
