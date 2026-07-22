@@ -4,6 +4,7 @@ import { headerContent } from '../data/headerContent'
 import videoCallImage from '../assets/img/user generated photo of woman wearing diamond earrings, selfie style.png'
 import badgeImage from '../assets/img/close up of hand wearing gold engagement ring, natural lighting.png'
 import VideoCallHowItWorksSection from '../components/VideoCallHowItWorksSection'
+import RequestFormSection from '../components/RequestFormSection'
 
 function VideoCallPage() {
   return (
@@ -46,6 +47,8 @@ function VideoCallPage() {
         </section>
 
         <VideoCallHowItWorksSection />
+
+        <RequestFormSection />
 
         <Footer />
       </div>
