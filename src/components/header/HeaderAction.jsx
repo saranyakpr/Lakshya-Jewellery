@@ -1,7 +1,8 @@
-function HeaderAction({ icon, label, badge }) {
+function HeaderAction({ icon, label, badge, onClick }) {
   return (
     <button
       className="group relative flex min-w-16 shrink-0 flex-col items-center gap-1 text-slate-800"
+      onClick={onClick}
       type="button"
     >
       <span className="relative flex items-center justify-center text-[#282828] transition group-hover:text-[#60195e]">

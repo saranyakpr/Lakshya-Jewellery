@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import CategoryNav from './CategoryNav'
 import HeaderAction from './HeaderAction'
 import {
@@ -50,7 +50,7 @@ function ServicesButton({ label }) {
   )
 }
 
-function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions }) {
+function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions, onSignInClick }) {
   return (
     <div className="flex flex-col gap-3 lg:hidden">
       <div className="flex items-center gap-3">
@@ -76,6 +76,7 @@ function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions 
               icon={action.icon}
               key={action.label}
               label={action.label}
+              onClick={action.label === 'Sign In' ? onSignInClick : undefined}
             />
           ))}
         </div>
@@ -90,6 +91,7 @@ function DesktopTopRow({
   primaryAction,
   actions,
   serviceLabel,
+  onSignInClick,
 }) {
   return (
     <div className="hidden items-center justify-between gap-4 lg:flex">
@@ -114,6 +116,7 @@ function DesktopTopRow({
               icon={action.icon}
               key={action.label}
               label={action.label}
+              onClick={action.label === 'Sign In' ? onSignInClick : undefined}
             />
           ))}
         </div>
@@ -133,6 +136,7 @@ function JewelleryHeader({
   serviceLabel,
 }) {
   const [isScrolled, setIsScrolled] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -146,6 +150,7 @@ function JewelleryHeader({
       <div className="flex flex-col gap-4 px-2 sm:px-5 lg:px-6">
         <MobileTopRow
           actions={actions}
+          onSignInClick={() => navigate('/sign-in')}
           primaryAction={primaryAction}
           serviceLabel={serviceLabel}
           searchPlaceholder={searchPlaceholder}
@@ -154,6 +159,7 @@ function JewelleryHeader({
         <DesktopTopRow
           actions={actions}
           brand={brand}
+          onSignInClick={() => navigate('/sign-in')}
           primaryAction={primaryAction}
           searchPlaceholder={searchPlaceholder}
           serviceLabel={serviceLabel}
