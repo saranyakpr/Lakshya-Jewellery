@@ -53,19 +53,19 @@ function CoinsIcon(props) {
 function DigitalGoldBanner() {
   return (
     <section className="w-full bg-black">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 !py-16 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:py-10 lg:px-8">
         <div>
-          <BarsIcon className="size-6 text-slate-300" />
+          <BarsIcon className="size-5 text-slate-300" />
 
-          <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl">Lakshya Digital Gold</h1>
+          <h1 className="mt-3 text-2xl font-bold text-white sm:text-3xl">Lakshya Digital Gold</h1>
 
-          <p className="mt-4 max-w-md text-sm text-slate-400 sm:text-base">
+          <p className="mt-2 max-w-md text-sm text-slate-400 sm:text-base">
             Invest in Pure 24K Gold Online - 100% Safe &amp; Trustworthy. Start...
           </p>
 
-          <div className="mt-8 flex items-center gap-6">
+          <div className="mt-5 flex items-center gap-6">
             <button
-              className="!rounded-lg bg-purple-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-purple-600"
+              className="!rounded-lg bg-purple-500 px-8 py-2 text-sm !font-semibold text-white transition hover:bg-purple-600"
               type="button"
             >
               Buy Now
@@ -81,16 +81,16 @@ function DigitalGoldBanner() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
           <img
             alt="Lakshya Digital Gold jewellery"
-            className="aspect-[400/280] w-full rounded-2xl object-cover"
+            className="aspect-[400/200] w-full rounded-2xl object-cover"
             src={necklaceImage}
           />
 
-          <div className="absolute -right-4 -top-6 flex h-40 w-32 flex-col justify-between rounded-2xl bg-gradient-to-br from-purple-500 to-[#2e1a4d] p-4 shadow-xl sm:-right-6 sm:h-48 sm:w-36">
-            <CoinsIcon className="size-6 text-amber-400" />
-            <p className="text-xs font-medium text-white/90">Digital Gold by Lakshya</p>
+          <div className="absolute -right-4 -top-4 flex !h-50 w-25 flex-col justify-between !rounded-lg bg-gradient-to-br from-purple-500 to-[#2e1a4d] p-3 shadow-xl sm:-right-5 sm:h-32 sm:w-28 sm:p-4">
+            <CoinsIcon className="size-5 text-amber-400" />
+            <p className="!text-[11px] !mb-0 font-medium leading-tight text-white/90">Digital Gold by Lakshya</p>
           </div>
         </div>
       </div>

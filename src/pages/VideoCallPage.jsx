@@ -40,7 +40,7 @@ function VideoCallPage() {
                   With CL Live, now you get to manage the most precious resource - your time!
                 </p>
                 <button
-                  className="mt-6 !rounded-lg bg-purple-500 px-8 py-3 text-sm font-semibold text-white transition hover:bg-purple-600"
+                  className="mt-6 !rounded-lg bg-purple-500 px-8 py-2 text-sm !font-semibold text-white transition hover:bg-purple-600"
                   type="button"
                 >
                   Schedule a Video Call
