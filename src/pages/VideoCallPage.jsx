@@ -8,6 +8,7 @@ import RequestFormSection from '../components/RequestFormSection'
 import SmartShoppingSection from '../components/SmartShoppingSection'
 import BrowseProductsSection from '../components/BrowseProductsSection'
 import ReviewsSection from '../components/ReviewsSection'
+import FaqSection from '../components/FaqSection'
 
 function VideoCallPage() {
   return (
@@ -58,6 +59,8 @@ function VideoCallPage() {
         <BrowseProductsSection />
 
         <ReviewsSection />
+
+        <FaqSection />
 
         <Footer />
       </div>
