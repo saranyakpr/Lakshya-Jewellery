@@ -86,7 +86,7 @@ function ArrowRightIcon(props) {
 function DigitalGoldRedeemSection() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <InfoIcon className="size-4 shrink-0 text-purple-400" />
         <p className="text-sm !mb-0 text-slate-500">You can redeem Lakshya eGold online or offline through any of our stores.</p>
         <p className="text-sm !mb-0 font-bold text-purple-500">Redeem</p>

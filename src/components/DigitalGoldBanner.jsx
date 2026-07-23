@@ -63,7 +63,7 @@ function DigitalGoldBanner() {
             Invest in Pure 24K Gold Online - 100% Safe &amp; Trustworthy. Start...
           </p>
 
-          <div className="mt-5 flex items-center gap-6">
+          <div className="mt-5 flex flex-wrap items-center gap-6">
             <button
               className="!rounded-lg bg-purple-500 px-8 py-2 text-sm !font-semibold text-white transition hover:bg-purple-600"
               type="button"
@@ -88,7 +88,7 @@ function DigitalGoldBanner() {
             src={necklaceImage}
           />
 
-          <div className="absolute -right-4 -top-4 flex !h-50 w-25 flex-col justify-between !rounded-lg bg-gradient-to-br from-purple-500 to-[#2e1a4d] p-3 shadow-xl sm:-right-5 sm:h-32 sm:w-28 sm:p-4">
+          <div className="absolute -right-4 -top-4 flex h-28 w-24 flex-col justify-between !rounded-lg bg-gradient-to-br from-purple-500 to-[#2e1a4d] p-3 shadow-xl sm:-right-5 sm:h-32 sm:w-28 sm:p-4">
             <CoinsIcon className="size-5 text-amber-400" />
             <p className="!text-[11px] !mb-0 font-medium leading-tight text-white/90">Digital Gold by Lakshya</p>
           </div>
