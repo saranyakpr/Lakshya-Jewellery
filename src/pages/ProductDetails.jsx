@@ -216,9 +216,27 @@ const largePromoCards = [
 ]
 
 const smallPromoCards = [
-  { label: 'One of a kind Silver Jewellery', cta: 'Shop Now', className: 'bg-purple-200 text-purple-900' },
-  { label: 'Trends that you cannot miss!', cta: 'Explore', className: 'bg-indigo-900 text-white' },
-  { label: 'Lakshya App - Get 10% off', cta: 'Download', className: 'bg-[#4f3267] text-white' },
+  {
+    label: 'One of a kind Silver Jewellery',
+    cta: 'Shop Now',
+    barClassName: 'bg-purple-100',
+    labelClassName: 'text-purple-300',
+    buttonClassName: 'bg-[#4f3267] text-white',
+  },
+  {
+    label: 'Trends that you cannot miss!',
+    cta: 'Explore',
+    barClassName: 'bg-indigo-950',
+    labelClassName: 'text-white',
+    buttonClassName: 'bg-white text-indigo-900',
+  },
+  {
+    label: 'Lakshya App - Get 10% off',
+    cta: 'Download',
+    barClassName: 'bg-purple-600',
+    labelClassName: 'text-white',
+    buttonClassName: 'bg-purple-100 text-purple-900',
+  },
 ]
 
 const reviews = [
@@ -582,26 +600,26 @@ function ProductDetails() {
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-between gap-4 rounded-xl bg-[#4f3267] p-6 lg:flex-row">
-          <div className="flex items-center gap-3 text-center lg:text-left">
-            <DiamondIcon className="size-8 shrink-0 text-white" />
+        <div className="flex flex-col items-center justify-between gap-4 rounded-xl bg-gradient-to-r from-[#6b3fa0] to-[#2a1745] p-6 lg:flex-row">
+          <div className="flex items-center gap-3">
+            <DiamondIcon className="size-13 shrink-0 text-white" />
             <div>
-              <p className="text-base font-bold text-white">Join Lakshya Insider</p>
-              <p className="text-sm text-purple-200">Exclusive offers, early access &amp; more</p>
+              <p className="!text-xl !mb-0 font-semibold text-white">Join Lakshya Insider</p>
+              <p className="text-md text-purple-200">Exclusive offers, early access &amp; more</p>
             </div>
           </div>
 
           <form
-            className="flex w-full flex-col gap-2 sm:flex-row lg:w-auto"
+            className="flex w-full flex-col sm:flex-row lg:w-auto"
             onSubmit={(event) => event.preventDefault()}
           >
             <input
-              className="h-11 w-full rounded-lg border-0 bg-white px-4 text-sm text-slate-700 outline-none placeholder:text-slate-400 sm:w-64"
+              className="h-11 w-full border-0 bg-white px-4 text-sm text-slate-700 outline-none placeholder:text-slate-400 !bg-red sm:w-64"
               placeholder="Enter your email"
               type="email"
             />
             <button
-              className="h-11 shrink-0 rounded-lg bg-purple-300 px-6 text-sm font-semibold text-[#4f3267] transition hover:bg-purple-200"
+              className="h-11 shrink-0 !rounded-r-lg bg-purple-300 px-6 text-sm !font-semibold text-[#5A2E8A] transition hover:bg-purple-200"
               type="submit"
             >
               Subscribe
@@ -614,11 +632,17 @@ function ProductDetails() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {smallPromoCards.map((card) => (
             <div
-              className={`flex items-center justify-between rounded-full px-4 py-3 ${card.className}`}
+              className={`flex items-center justify-between gap-3 rounded-full px-4 py-2.5 ${card.barClassName}`}
               key={card.label}
             >
-              <span className="text-xs font-semibold sm:text-sm">{card.label}</span>
-              <span className="text-xs font-bold underline">{card.cta}</span>
+              <span className={`text-xs font-semibold sm:text-sm ${card.labelClassName}`}>
+                {card.label}
+              </span>
+              <span
+                className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${card.buttonClassName}`}
+              >
+                {card.cta}
+              </span>
             </div>
           ))}
         </div>
