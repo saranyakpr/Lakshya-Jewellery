@@ -614,7 +614,7 @@ function ProductDetails() {
             onSubmit={(event) => event.preventDefault()}
           >
             <input
-              className="h-11 w-full border-0 bg-white px-4 text-sm text-slate-700 outline-none placeholder:text-slate-400 !bg-red sm:w-64"
+              className="h-11 w-full border border-white/40 bg-transparent px-4 text-sm text-white outline-none placeholder:text-white/60 sm:w-64"
               placeholder="Enter your email"
               type="email"
             />
@@ -632,7 +632,7 @@ function ProductDetails() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {smallPromoCards.map((card) => (
             <div
-              className={`flex items-center justify-between gap-3 rounded-full px-4 py-2.5 ${card.barClassName}`}
+              className={`flex items-center justify-between gap-3 rounded-lg px-4 py-2 ${card.barClassName}`}
               key={card.label}
             >
               <span className={`text-xs font-semibold sm:text-sm ${card.labelClassName}`}>
