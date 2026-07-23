@@ -50,7 +50,7 @@ function ServicesButton({ label }) {
   )
 }
 
-function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions, onSignInClick }) {
+function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions, onActionClick }) {
   return (
     <div className="flex flex-col gap-3 lg:hidden">
       <div className="flex items-center gap-3">
@@ -76,7 +76,7 @@ function MobileTopRow({ primaryAction, serviceLabel, searchPlaceholder, actions,
               icon={action.icon}
               key={action.label}
               label={action.label}
-              onClick={action.label === 'Sign In' ? onSignInClick : undefined}
+              onClick={() => onActionClick(action.label)}
             />
           ))}
         </div>
@@ -91,7 +91,7 @@ function DesktopTopRow({
   primaryAction,
   actions,
   serviceLabel,
-  onSignInClick,
+  onActionClick,
 }) {
   return (
     <div className="hidden items-center justify-between gap-4 lg:flex">
@@ -116,7 +116,7 @@ function DesktopTopRow({
               icon={action.icon}
               key={action.label}
               label={action.label}
-              onClick={action.label === 'Sign In' ? onSignInClick : undefined}
+              onClick={() => onActionClick(action.label)}
             />
           ))}
         </div>
@@ -138,6 +138,15 @@ function JewelleryHeader({
   const [isScrolled, setIsScrolled] = useState(false)
   const navigate = useNavigate()
 
+  const actionRoutes = {
+    'Sign In': '/sign-in',
+    Wishlist: '/wishlist',
+  }
+  const handleActionClick = (label) => {
+    const path = actionRoutes[label]
+    if (path) navigate(path)
+  }
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
     handleScroll()
@@ -150,7 +159,7 @@ function JewelleryHeader({
       <div className="flex flex-col gap-4 px-2 sm:px-5 lg:px-6">
         <MobileTopRow
           actions={actions}
-          onSignInClick={() => navigate('/sign-in')}
+          onActionClick={handleActionClick}
           primaryAction={primaryAction}
           serviceLabel={serviceLabel}
           searchPlaceholder={searchPlaceholder}
@@ -159,7 +168,7 @@ function JewelleryHeader({
         <DesktopTopRow
           actions={actions}
           brand={brand}
-          onSignInClick={() => navigate('/sign-in')}
+          onActionClick={handleActionClick}
           primaryAction={primaryAction}
           searchPlaceholder={searchPlaceholder}
           serviceLabel={serviceLabel}
