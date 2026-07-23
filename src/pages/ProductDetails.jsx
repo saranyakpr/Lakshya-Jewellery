@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { products } from '../data/products'
 import { DiamondIcon } from '../components/header/HeaderIcons'
 
@@ -283,6 +283,7 @@ const occasionItems = ['Wedding', 'Anniversary', 'Birthday', 'Festive', 'Casual'
 const shopByProductItems = ['Rings', 'Earrings', 'Necklaces', 'Bracelets', 'Wedding']
 
 function ProductDetails() {
+  const navigate = useNavigate()
   const { productId } = useParams()
   const product = products.find((item) => item.slug === productId)
 
@@ -388,6 +389,7 @@ function ProductDetails() {
 
             <button
               className="mt-6 w-full !rounded-lg bg-[#4f3267] py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-[#3c2650]"
+              onClick={() => navigate('/bag')}
               type="button"
             >
               Add to Bag
