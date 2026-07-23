@@ -272,51 +272,76 @@ function CartHeader() {
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('bag')
 
+  const toggle = (
+    <div className="pointer-events-auto inline-flex rounded-full bg-purple-100 p-1">
+      <button
+        className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold transition sm:text-sm ${
+          activeTab === 'bag' ? '!bg-white !text-[#4f3267] shadow-sm' : '!text-[#4f3267]'
+        }`}
+        onClick={() => setActiveTab('bag')}
+        type="button"
+      >
+        Shopping Bag (2)
+      </button>
+      <button
+        className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold transition sm:text-sm ${
+          activeTab === 'trial' ? '!bg-white !text-[#4f3267] shadow-sm' : '!text-[#4f3267]'
+        }`}
+        onClick={() => setActiveTab('trial')}
+        type="button"
+      >
+        Home Trial (0)
+      </button>
+    </div>
+  )
+
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-2 items-center gap-3 px-4 py-3 sm:grid-cols-3 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3">
-          <button
-            aria-label="Go back"
-            className="text-slate-500 transition hover:text-slate-800"
-            onClick={() => navigate(-1)}
-            type="button"
-          >
-            <ChevronLeftIcon className="size-5" />
-          </button>
-          <Link to="/">
-            <img alt="Lakshya Jewellery logo" className="h-8 w-auto" src={logo} />
-          </Link>
-        </div>
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+        <div className="flex w-full items-center justify-between gap-3 sm:w-auto">
+          <div className="flex items-center gap-3">
+            <button
+              aria-label="Go back"
+              className="!text-slate-500 transition hover:!text-slate-800"
+              onClick={() => navigate(-1)}
+              type="button"
+            >
+              <ChevronLeftIcon className="size-5" />
+            </button>
+            <Link to="/">
+              <img alt="Lakshya Jewellery logo" className="h-8 w-auto" src={logo} />
+            </Link>
+          </div>
 
-        <div className="order-3 col-span-2 flex justify-center sm:order-none sm:col-span-1">
-          <div className="inline-flex rounded-full bg-purple-100 p-1">
-            <button
-              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold transition sm:text-sm ${
-                activeTab === 'bag' ? 'bg-white text-[#4f3267] shadow-sm' : 'text-[#4f3267]'
-              }`}
-              onClick={() => setActiveTab('bag')}
-              type="button"
+          <div className="flex items-center gap-3 sm:hidden">
+            <a
+              aria-label="Chat with us on WhatsApp"
+              className="!text-[#4f3267] transition hover:!text-[#3c2650]"
+              href="https://wa.me/914442935000"
+              rel="noreferrer"
+              target="_blank"
             >
-              Shopping Bag (2)
-            </button>
-            <button
-              className={`whitespace-nowrap rounded-full px-4 py-1.5 text-xs font-semibold transition sm:text-sm ${
-                activeTab === 'trial' ? 'bg-white text-[#4f3267] shadow-sm' : 'text-[#4f3267]'
-              }`}
-              onClick={() => setActiveTab('trial')}
-              type="button"
+              <WhatsAppIcon className="size-5" />
+            </a>
+            <a
+              aria-label="Call us"
+              className="!text-[#4f3267] transition hover:!text-[#3c2650]"
+              href="tel:+914442935000"
             >
-              Home Trial (0)
-            </button>
+              <PhoneIcon className="size-5" />
+            </a>
           </div>
         </div>
 
-        <div className="flex items-center justify-end gap-3">
-          <span className="hidden text-sm text-slate-500 sm:inline">Need Assistance?</span>
+        <div className="pointer-events-none flex w-full justify-center sm:absolute sm:inset-x-0 sm:top-1/2 sm:-translate-y-1/2">
+          {toggle}
+        </div>
+
+        <div className="hidden items-center gap-3 sm:flex">
+          <span className="text-sm text-slate-500">Need Assistance?</span>
           <a
             aria-label="Chat with us on WhatsApp"
-            className="text-[#4f3267] transition hover:text-[#3c2650]"
+            className="!text-[#4f3267] transition hover:!text-[#3c2650]"
             href="https://wa.me/914442935000"
             rel="noreferrer"
             target="_blank"
@@ -325,7 +350,7 @@ function CartHeader() {
           </a>
           <a
             aria-label="Call us"
-            className="text-[#4f3267] transition hover:text-[#3c2650]"
+            className="!text-[#4f3267] transition hover:!text-[#3c2650]"
             href="tel:+914442935000"
           >
             <PhoneIcon className="size-5" />
