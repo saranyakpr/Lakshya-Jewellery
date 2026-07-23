@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 function PhoneIcon(props) {
   return (
     <svg
@@ -31,14 +33,36 @@ function PlusIcon(props) {
 }
 
 const faqs = [
-  'What is CL Live?',
-  'How is the product shown?',
-  'Is CL Live available outside India?',
-  'Can I buy directly from CL Live?',
-  'What are the payment modes?',
+  {
+    question: 'What is CL Live?',
+    answer:
+      'CL Live is our live video call shopping experience that lets you browse and buy jewellery from the comfort of your home with a dedicated consultant.',
+  },
+  {
+    question: 'How is the product shown?',
+    answer:
+      'Our consultant walks you through the pieces on a live video call, showing real-time close-ups, angles and lighting so you can see every detail before you decide.',
+  },
+  {
+    question: 'Is CL Live available outside India?',
+    answer:
+      'Yes, CL Live is available for customers outside India as well. You can schedule a call at a time that works best for your time zone.',
+  },
+  {
+    question: 'Can I buy directly from CL Live?',
+    answer:
+      'Yes, you can shortlist and purchase your favourite pieces directly during the video call, with secure payment and doorstep delivery.',
+  },
+  {
+    question: 'What are the payment modes?',
+    answer:
+      'We accept all major credit and debit cards, UPI, net banking and EMI options for a smooth and secure checkout.',
+  },
 ]
 
 function FaqSection() {
+  const [openIndex, setOpenIndex] = useState(null)
+
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
@@ -55,12 +79,32 @@ function FaqSection() {
         </div>
 
         <div className="divide-y divide-slate-200">
-          {faqs.map((question) => (
-            <div className="flex items-center justify-between gap-4 py-5" key={question}>
-              <PlusIcon className="size-4 shrink-0 text-gray-500 " />
-              <span className="text-right text-sm text-slate-700">{question}</span>
-            </div>
-          ))}
+          {faqs.map(({ question, answer }, index) => {
+            const isOpen = openIndex === index
+
+            return (
+              <div className="py-3" key={question}>
+                <button
+                  className="flex w-full items-center justify-between gap-4 text-left"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  type="button"
+                >
+                  <PlusIcon
+                    className={`size-4 shrink-0 text-gray-500 transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}
+                  />
+                  <span className="text-right text-sm text-slate-700">{question}</span>
+                </button>
+
+                <div
+                  className={`grid overflow-hidden transition-all duration-300 ${
+                    isOpen ? 'mt-3 grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <p className="overflow-hidden text-right text-sm text-slate-500">{answer}</p>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
