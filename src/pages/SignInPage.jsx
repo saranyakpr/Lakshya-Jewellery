@@ -102,7 +102,7 @@ function SignInPage() {
               <div className="flex gap-8 border-b border-slate-200">
                 {tabs.map((tab) => (
                   <button
-                    className={`-mb-px border-b-2 pb-3 text-sm font-bold uppercase tracking-wide transition ${
+                    className={`-mb-px border-b-2 pb-2 text-sm !font-bold !uppercase tracking-wide transition ${
                       activeTab === tab
                         ? 'border-[#4F3267] text-[#4F3267]'
                         : 'border-transparent text-slate-400 hover:text-slate-600'
