@@ -7,6 +7,7 @@ import VideoCallHowItWorksSection from '../components/VideoCallHowItWorksSection
 import RequestFormSection from '../components/RequestFormSection'
 import SmartShoppingSection from '../components/SmartShoppingSection'
 import BrowseProductsSection from '../components/BrowseProductsSection'
+import ReviewsSection from '../components/ReviewsSection'
 
 function VideoCallPage() {
   return (
@@ -55,6 +56,8 @@ function VideoCallPage() {
         <SmartShoppingSection />
 
         <BrowseProductsSection />
+
+        <ReviewsSection />
 
         <Footer />
       </div>
