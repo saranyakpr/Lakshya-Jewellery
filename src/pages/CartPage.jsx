@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
 import logo from '../assets/img/logo.png'
@@ -297,7 +297,7 @@ function CartHeader() {
 
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-4 py-3 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-3 px-4 sm:flex-row sm:justify-between sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-between gap-3 sm:w-auto">
           <div className="flex items-center gap-3">
             <button
@@ -309,7 +309,7 @@ function CartHeader() {
               <ChevronLeftIcon className="size-5" />
             </button>
             <Link to="/">
-              <img alt="Lakshya Jewellery logo" className="h-8 w-auto" src={logo} />
+              <img alt="Lakshya Jewellery logo" className="h-20 w-auto" src={logo} />
             </Link>
           </div>
 
@@ -603,6 +603,10 @@ function TrustBadgesBar() {
 
 function CartPage() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <main className="min-h-screen bg-[#f7f5fb]">
