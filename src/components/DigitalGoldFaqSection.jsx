@@ -75,7 +75,7 @@ function DigitalGoldFaqSection() {
                 const isOpen = openKey === key
 
                 return (
-                  <div className="py-5" key={key}>
+                  <div className="py-3" key={key}>
                     <button
                       className="flex w-full items-center justify-between gap-4 text-left"
                       onClick={() => setOpenKey(isOpen ? null : key)}

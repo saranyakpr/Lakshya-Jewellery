@@ -86,42 +86,39 @@ function ArrowRightIcon(props) {
 function DigitalGoldRedeemSection() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex items-center gap-2">
         <InfoIcon className="size-4 shrink-0 text-purple-400" />
-        <p className="text-sm text-slate-500">
-          You can redeem Lakshya eGold online or offline through any of our stores.
-        </p>
-        <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
-          <span className="text-purple-500 text-sm">Redeem</span> eGold to jewellery, in a blink!
-        </h2>
+        <p className="text-sm !mb-0 text-slate-500">You can redeem Lakshya eGold online or offline through any of our stores.</p>
+        <p className="text-sm !mb-0 font-bold text-purple-500">Redeem</p>
+        <p className="text-xl !mb-0 font-bold text-slate-900 sm:text-2xl">eGold to jewellery, in a blink!</p>
       </div>
 
       <div className="mt-10 flex flex-col items-stretch gap-6 lg:flex-row lg:items-center">
-        <div className="flex-1 rounded-2xl bg-white p-8 text-center shadow-sm">
+        <div className="flex-1 rounded-2xl bg-white p-6 text-center shadow-sm">
           <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-purple-100 text-purple-500">
             <RingIcon className="size-6" />
           </span>
-          <p className="mt-4 text-sm text-slate-600">Choose your favorite jewellery from Lakshya</p>
+          <p className="mt-4 !text-sm text-slate-600">Choose your favorite jewellery from Lakshya</p>
         </div>
 
         <ArrowRightIcon className="mx-auto hidden size-6 shrink-0 text-slate-300 lg:block" />
 
-        <div className="flex-1 rounded-2xl bg-white p-8 text-center shadow-sm">
+        <div className="flex-1 rounded-2xl bg-white p-6 text-center shadow-sm">
           <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-purple-100 text-purple-500">
             <CartIcon className="size-6" />
           </span>
           <p className="mt-4 text-sm text-slate-600">Redeem your Lakshya eGold at checkout</p>
         </div>
 
-        <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-sm lg:w-72 lg:shrink-0">
+        <div className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm lg:w-72 lg:shrink-0">
           <span className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-500">
             <BankIcon className="size-5" />
           </span>
           <div>
-            <p className="text-sm font-bold text-slate-900">Visit Vault</p>
-            <p className="text-xs text-slate-500">Check your gold balance</p>
+            <p className="!text-sm font-bold !mb-0 text-slate-900">Visit Vault</p>
+            <p className="!text-xs !mb-0 text-slate-500">Check your gold balance</p>
             <button
-              className="mt-1 flex items-center gap-1 text-xs font-semibold text-purple-500"
+              className="mt-1 flex items-center gap-1 !text-xs font-semibold text-purple-500"
               type="button"
             >
               <ArrowRightIcon className="size-3" />

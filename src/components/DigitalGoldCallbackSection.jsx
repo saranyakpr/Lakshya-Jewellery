@@ -20,16 +20,16 @@ function DigitalGoldCallbackSection() {
   const [mobileNumber, setMobileNumber] = useState('')
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <section className="mx-auto bg-white w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="text-sm text-slate-400">Got questions? We have all the answers!</p>
-          <h2 className="mt-2 text-2xl font-bold leading-snug text-slate-900 sm:text-3xl">
+          <p className="text-sm text-slate-400 !mb-0">Got questions? We have all the answers!</p>
+          <h2 className="mt-2 !text-3xl !font-bold leading-snug text-slate-900 sm:text-3xl">
             Have questions about Lakshya eGold? Share your number and we will call you back!
           </h2>
         </div>
 
-        <div className="mx-auto w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+        <div className="mx-auto w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm">
           <PhoneIcon className="mx-auto size-7 text-purple-500" />
           <p className="mt-3 text-center text-sm font-bold text-slate-900">
             At Your Service. Always.
