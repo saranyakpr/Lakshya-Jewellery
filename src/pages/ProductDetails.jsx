@@ -141,11 +141,11 @@ function ProductCardSection({ title, items, gridClassName }) {
 function PillSection({ title, items, active, pillClassName }) {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h2 className="text-center text-sm font-semibold text-slate-900">{title}</h2>
-      <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+      <h2 className="text-center !text-sm font-semibold !text-gray-500">{title}</h2>
+      <div className="mt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
         {items.map((item) => (
           <button
-            className={`whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold transition sm:text-sm ${
+            className={`whitespace-nowrap !rounded-full px-4 py-2 text-xs font-semibold transition sm:text-sm ${
               item === active
                 ? 'bg-[#4f3267] text-white'
                 : pillClassName
@@ -164,7 +164,7 @@ function PillSection({ title, items, active, pillClassName }) {
 function IconLabelSection({ title, items, tileClassName, textClassName }) {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <h2 className="text-center text-sm font-semibold text-slate-900">{title}</h2>
+      <h2 className="text-center !text-sm font-semibold !text-gray-500">{title}</h2>
       <div className="mt-4 grid grid-cols-3 gap-4 sm:grid-cols-5 sm:gap-6">
         {items.map((item) => (
           <div className="flex flex-col items-center gap-2 text-center" key={item}>
@@ -219,8 +219,8 @@ const smallPromoCards = [
   {
     label: 'One of a kind Silver Jewellery',
     cta: 'Shop Now',
-    barClassName: 'bg-purple-100',
-    labelClassName: 'text-purple-300',
+    barClassName: 'bg-purple-300',
+    labelClassName: 'text-white',
     buttonClassName: 'bg-[#4f3267] text-white',
   },
   {
@@ -228,7 +228,7 @@ const smallPromoCards = [
     cta: 'Explore',
     barClassName: 'bg-indigo-950',
     labelClassName: 'text-white',
-    buttonClassName: 'bg-white text-indigo-900',
+    buttonClassName: 'bg-purple-700 text-white',
   },
   {
     label: 'Lakshya App - Get 10% off',
