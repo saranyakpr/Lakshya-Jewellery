@@ -1,5 +1,8 @@
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import goldRing from '../assets/img/minimalist 22kt gold ring for women, delicate thin band.png'
+import studEarrings from '../assets/img/image 27.png'
+import braceletImage from '../assets/img/collection-swirl.png'
 
 function BoxIcon(props) {
   return (
@@ -60,13 +63,178 @@ function CheckCircleIcon(props) {
   )
 }
 
+function ReceiptRefundIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 14l6-6m0 0l-3.75 0M15 8l0 3.75" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+  )
+}
+
+function CheckmarkIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
+
+function ProgressCircleIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>
+  )
+}
+
+function RejectedCrossIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m15 9-6 6m0-6 6 6" />
+    </svg>
+  )
+}
+
+function InfoHelpIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01" />
+    </svg>
+  )
+}
+
+function ChevronDownSmallIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+    </svg>
+  )
+}
+
+function PhoneSupportIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+    </svg>
+  )
+}
+
+function MailSupportIcon(props) {
+  return (
+    <svg fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+    </svg>
+  )
+}
+
+function ThreeDotsIcon(props) {
+  return (
+    <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+      <circle cx="12" cy="5" r="1.8" />
+      <circle cx="12" cy="12" r="1.8" />
+      <circle cx="12" cy="19" r="1.8" />
+    </svg>
+  )
+}
+
+function ShieldIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" />
+    </svg>
+  )
+}
+
+function WalletIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M21 7H5a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-6a2 2 0 00-2-2h-4a1.5 1.5 0 000 3h4" />
+      <path d="M16 7V5.5A1.5 1.5 0 0014.5 4H5" />
+    </svg>
+  )
+}
+
+function ClockIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="1.8"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 3" />
+    </svg>
+  )
+}
+
+function RefundStatIcon({ type, className }) {
+  if (type === 'total') return <WalletIcon className={className} />
+  if (type === 'approved') return <CheckCircleIcon className={className} />
+  if (type === 'in-progress') return <ClockIcon className={className} />
+  if (type === 'rejected') return <RejectedCrossIcon className={className} />
+  return null
+}
+
+function VisaBadge({ className = '' }) {
+  return (
+    <div
+      className={`flex items-center justify-center rounded bg-[#1A1F71] font-black italic text-white ${className}`}
+    >
+      VISA
+    </div>
+  )
+}
+
+function MastercardBadge({ className = '' }) {
+  return (
+    <div className={`flex items-center ${className}`}>
+      <span className="size-4 rounded-full bg-[#EB001B] opacity-90" />
+      <span className="-ml-1.5 size-4 rounded-full bg-[#F79E1B] opacity-90" />
+    </div>
+  )
+}
+
+function RupayBadge({ className = '' }) {
+  return (
+    <div className={`font-black italic text-[#0B4EA2] ${className}`}>
+      Ru<span className="text-[#F47216]">Pay</span>
+    </div>
+  )
+}
+
+function UpiBadge({ className = '' }) {
+  return <div className={`font-black text-slate-700 ${className}`}>UPI</div>
+}
+
 const navGroups = [
   {
     label: 'Orders',
     items: [
       { id: 'orders', label: 'Orders and Returns' },
-      { id: 'payment', label: 'Payment' },
-      { id: 'refunds', label: 'Manage Refunds' },
+      { id: 'payment', label: 'Payment & Refund' },
     ],
   },
   {
@@ -189,7 +357,202 @@ const initialCancelledOrders = [
 ]
 
 const orderTabs = ['My Orders', 'Cancelled Orders']
-const paymentTabs = ['PAYMENT METHODS', 'TRANSACTION', 'REFUND REQUESTS', 'REFUND POLICY']
+const paymentTabs = ['PAYMENT METHODS', 'TRANSACTIONS', 'REFUND REQUESTS', 'REFUND POLICY']
+
+const initialRefundRequests = [
+  {
+    id: 'REF-001',
+    orderId: '#LJ123456789',
+    title: 'Classic Gold Ring',
+    image: goldRing,
+    requestedDate: '20 May 2024',
+    amount: '₹1,250',
+    status: 'Approved',
+    refundedDate: '22 May 2024',
+    refundedTo: 'UPI •••• 1234',
+    methodType: 'UPI (Google Pay / PhonePe)',
+    arn: 'ARN-8392019482',
+    reason: 'Customer requested cancellation before order dispatch',
+    items: [{ name: 'Classic Gold Ring (22KT Gold)', qty: 1, price: '₹1,250' }],
+  },
+  {
+    id: 'REF-002',
+    orderId: '#LJ123456123',
+    title: 'Silver Floral Earrings',
+    image: studEarrings,
+    requestedDate: '15 May 2024',
+    amount: '₹800',
+    status: 'Approved',
+    refundedDate: '17 May 2024',
+    refundedTo: 'Bank •••• 4567',
+    methodType: 'HDFC Bank Account (NEFT)',
+    arn: 'ARN-5729104821',
+    reason: 'Size exchange adjusted amount refund',
+    items: [{ name: 'Silver Floral Stud Earrings (925 Silver)', qty: 1, price: '₹800' }],
+  },
+  {
+    id: 'REF-003',
+    orderId: '#LJ123455999',
+    title: 'Diamond Bracelet',
+    image: braceletImage,
+    requestedDate: '10 May 2024',
+    amount: '₹400',
+    status: 'Approved',
+    refundedDate: '12 May 2024',
+    refundedTo: 'UPI •••• 9876',
+    methodType: 'UPI (Paytm / BHIM)',
+    arn: 'ARN-2948103957',
+    reason: 'Special promotional coupon balance adjustment refund',
+    items: [{ name: 'Delicate Diamond Swirl Bracelet (18KT Gold)', qty: 1, price: '₹400' }],
+  },
+]
+
+const refundStats = [
+  {
+    id: 'total',
+    title: 'Total Refunds',
+    amount: '₹2,450',
+    subtext: 'Across 3 requests',
+    bgColor: 'bg-[#EDE9FE]',
+    textColor: 'text-[#7C3AED]',
+    icon: 'total',
+  },
+  {
+    id: 'approved',
+    title: 'Approved',
+    amount: '₹2,450',
+    subtext: '3 requests',
+    bgColor: 'bg-[#DCFCE7]',
+    textColor: 'text-[#16A34A]',
+    icon: 'approved',
+  },
+  {
+    id: 'in-progress',
+    title: 'In Progress',
+    amount: '₹0',
+    subtext: '0 requests',
+    bgColor: 'bg-[#FFEDD5]',
+    textColor: 'text-[#EA580C]',
+    icon: 'in-progress',
+  },
+  {
+    id: 'rejected',
+    title: 'Rejected',
+    amount: '₹0',
+    subtext: '0 requests',
+    bgColor: 'bg-[#FFE4E6]',
+    textColor: 'text-[#E11D48]',
+    icon: 'rejected',
+  },
+]
+
+const initialPaymentMethods = [
+  {
+    id: 'pm-1',
+    brand: 'visa',
+    label: 'Visa ending in 4242',
+    detail: 'Expires 12/26',
+    holder: 'Sri Shakthi',
+    isDefault: true,
+  },
+  {
+    id: 'pm-2',
+    brand: 'upi',
+    label: 'UPI ID',
+    detail: 'shakthi235@okaxis',
+    holder: 'Sri Shakthi',
+    isDefault: false,
+  },
+]
+
+const transactionsPageOne = [
+  {
+    id: '#LJ123456789',
+    date: '22 May 2024, 10:30 AM',
+    description: 'Classic Gold Ring',
+    method: 'UPI (•••• 1234)',
+    amount: '₹1,250',
+    status: 'Success',
+  },
+  {
+    id: '#LJ123456123',
+    date: '17 May 2024, 02:15 PM',
+    description: 'Silver Floral Earrings',
+    method: 'Bank (•••• 4567)',
+    amount: '₹800',
+    status: 'Success',
+  },
+  {
+    id: '#LJ123455999',
+    date: '12 May 2024, 11:05 AM',
+    description: 'Diamond Bracelet',
+    method: 'UPI (•••• 9876)',
+    amount: '₹400',
+    status: 'Refunded',
+  },
+  {
+    id: '#LJ123455555',
+    date: '08 May 2024, 06:40 PM',
+    description: 'Gold Pendant',
+    method: 'Card (•••• 4242)',
+    amount: '₹2,150',
+    status: 'Success',
+  },
+  {
+    id: '#LJ123455111',
+    date: '01 May 2024, 09:20 AM',
+    description: 'Pearl Necklace',
+    method: 'UPI (•••• 1234)',
+    amount: '₹1,950',
+    status: 'Failed',
+  },
+]
+
+const transactionsPageTwo = [
+  {
+    id: '#LJ123454777',
+    date: '24 Apr 2024, 04:10 PM',
+    description: 'Rose Gold Chain',
+    method: 'Card (•••• 4242)',
+    amount: '₹3,400',
+    status: 'Success',
+  },
+  {
+    id: '#LJ123454321',
+    date: '18 Apr 2024, 01:50 PM',
+    description: 'Kundan Choker Set',
+    method: 'UPI (•••• 1234)',
+    amount: '₹5,600',
+    status: 'Success',
+  },
+]
+
+const refundPolicyCards = [
+  {
+    id: 'returns',
+    icon: 'returns',
+    title: '30-Day Easy Returns',
+    desc: 'You can request a return within 30 days of delivery for most products.',
+  },
+  {
+    id: 'eligibility',
+    icon: 'eligibility',
+    title: 'Eligibility',
+    desc: 'Items must be unused, in original condition with all tags and certificates.',
+  },
+  {
+    id: 'process',
+    icon: 'process',
+    title: 'Refund Process',
+    desc: 'Once we receive and inspect your return, refunds are processed within 5-7 business days.',
+  },
+  {
+    id: 'methods',
+    icon: 'methods',
+    title: 'Refund Methods',
+    desc: 'Refunds are issued to the original payment method or as store credit.',
+  },
+]
 
 function SignInPage() {
   const navigate = useNavigate()
@@ -198,7 +561,7 @@ function SignInPage() {
   // Navigation State
   const [activeNavItem, setActiveNavItem] = useState('orders')
   const [activeOrderTab, setActiveOrderTab] = useState(orderTabs[0])
-  const [activePaymentTab, setActivePaymentTab] = useState('REFUND REQUESTS')
+  const [activePaymentTab, setActivePaymentTab] = useState('PAYMENT METHODS')
 
   // Orders State
   const [orders, setOrders] = useState(initialOrders)
@@ -206,7 +569,18 @@ function SignInPage() {
   const [selectedOrderDetails, setSelectedOrderDetails] = useState(null)
   const [selectedTrackOrder, setSelectedTrackOrder] = useState(null)
   const [selectedRefundDetails, setSelectedRefundDetails] = useState(null)
+  const [refundRequests, setRefundRequests] = useState(initialRefundRequests)
+  const [selectedRefundModal, setSelectedRefundModal] = useState(null)
+  const [showSupportModal, setShowSupportModal] = useState(false)
   const [actionNotice, setActionNotice] = useState(null)
+
+  // Payment Methods State
+  const [paymentMethods, setPaymentMethods] = useState(initialPaymentMethods)
+  const [openMethodMenu, setOpenMethodMenu] = useState(null)
+
+  // Transactions State
+  const [transactionPage, setTransactionPage] = useState(1)
+  const [selectedTransaction, setSelectedTransaction] = useState(null)
 
   // Profile Form State
   const [profile, setProfile] = useState({
@@ -238,10 +612,29 @@ function SignInPage() {
     }
     if (item.id === 'payment') {
       setActiveNavItem('payment')
-      setActivePaymentTab('REFUND REQUESTS')
+      setActivePaymentTab('PAYMENT METHODS')
       return
     }
     setActiveNavItem(item.id)
+  }
+
+  const handleSetDefaultMethod = (id) => {
+    setPaymentMethods((prev) => prev.map((m) => ({ ...m, isDefault: m.id === id })))
+    setOpenMethodMenu(null)
+    setActionNotice('Default payment method updated.')
+    setTimeout(() => setActionNotice(null), 3000)
+  }
+
+  const handleRemoveMethod = (id) => {
+    setPaymentMethods((prev) => prev.filter((m) => m.id !== id))
+    setOpenMethodMenu(null)
+    setActionNotice('Payment method removed.')
+    setTimeout(() => setActionNotice(null), 3000)
+  }
+
+  const handleAddMethodClick = () => {
+    setActionNotice('Add Payment Method flow coming soon.')
+    setTimeout(() => setActionNotice(null), 3000)
   }
 
   const handlePhotoUpload = (event) => {
@@ -601,97 +994,382 @@ function SignInPage() {
                     ))}
                   </div>
 
-                  {/* Tab Content: REFUND REQUESTS */}
-                  {activePaymentTab === 'REFUND REQUESTS' && (
-                    <div className="mt-8">
-                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
-                        {/* Card 1: Total Refunds */}
-                        <div className="flex min-h-[145px] flex-col items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm">
-                          <p className="!mb-0 text-sm font-semibold text-[#4F3267]">
-                            Total Refunds
-                          </p>
-                          <p className="!mb-0 mt-2 !text-2xl sm:!text-3xl !font-extrabold text-[#4F3267]">
-                            ₹2,250
-                          </p>
-                          <p className="!mb-0 mt-2 text-xs text-slate-400">
-                            Across 3 requests
-                          </p>
-                        </div>
+                  {/* Tab Content: PAYMENT METHODS */}
+                  {activePaymentTab === 'PAYMENT METHODS' && (
+                    <div className="mt-3 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                      <div className="lg:col-span-2">
+                        <h3 className="!mb-4 !text-[1.25rem] font-bold uppercase tracking-wider text-[#4F3267]">
+                          Saved Payment Methods
+                        </h3>
+                        <div className="flex flex-col gap-3">
+                          {paymentMethods.map((method) => (
+                            <div
+                              className="flex items-center justify-between gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm"
+                              key={method.id}
+                            >
+                              <div className="flex items-center gap-4">
+                                {method.brand === 'visa' ? (
+                                  <VisaBadge className="h-8 w-12 text-xs shrink-0" />
+                                ) : (
+                                  <div className="flex h-8 w-12 shrink-0 items-center justify-center rounded-md bg-slate-100">
+                                    <UpiBadge className="text-sm" />
+                                  </div>
+                                )}
+                                <div>
+                                  <div className="flex items-center gap-2">
+                                    <p className="!mb-0 text-sm font-bold text-[#4F3267]">
+                                      {method.label}
+                                    </p>
+                                    {method.isDefault && (
+                                      <span className="inline-flex items-center rounded-full bg-[#EDE9FE] px-2 py-0.5 text-[10px] font-bold text-[#7C3AED]">
+                                        Default
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="!mb-0 text-xs text-slate-400">{method.detail}</p>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-4">
+                                <span className="hidden text-xs text-slate-500 sm:inline">
+                                  {method.holder}
+                                </span>
+                                <div className="relative">
+                                  <button
+                                    className="p-1 text-slate-400 transition hover:text-slate-600"
+                                    onClick={() =>
+                                      setOpenMethodMenu(
+                                        openMethodMenu === method.id ? null : method.id,
+                                      )
+                                    }
+                                    type="button"
+                                  >
+                                    <ThreeDotsIcon className="size-5" />
+                                  </button>
+                                  {openMethodMenu === method.id && (
+                                    <div className="absolute right-0 z-10 mt-1 w-40 rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
+                                      {!method.isDefault && (
+                                        <button
+                                          className="block w-full px-3 py-2 text-left text-xs font-semibold text-slate-600 hover:bg-slate-50"
+                                          onClick={() => handleSetDefaultMethod(method.id)}
+                                          type="button"
+                                        >
+                                          Set as Default
+                                        </button>
+                                      )}
+                                      <button
+                                        className="block w-full px-3 py-2 text-left text-xs font-semibold text-red-500 hover:bg-red-50"
+                                        onClick={() => handleRemoveMethod(method.id)}
+                                        type="button"
+                                      >
+                                        Remove
+                                      </button>
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
 
-                        {/* Card 2: Approved */}
-                        <div className="flex min-h-[145px] flex-col items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm">
-                          <p className="!mb-0 text-sm font-semibold text-[#4F3267]">
-                            Approved
-                          </p>
-                          <p className="!mb-0 mt-2 !text-2xl sm:!text-3xl !font-extrabold text-[#4F3267]">
-                            ₹2,450
-                          </p>
-                          <p className="!mb-0 mt-2 text-xs text-slate-400">
-                            3 requests
-                          </p>
+                          <button
+                            className="flex items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-purple-200 bg-purple-50/40 py-4 text-sm font-bold text-purple-600 transition hover:bg-purple-50"
+                            onClick={handleAddMethodClick}
+                            type="button"
+                          >
+                            <span className="text-lg leading-none">+</span> Add New Payment Method
+                          </button>
                         </div>
+                      </div>
 
-                        {/* Card 3: In Progress */}
-                        <div className="flex min-h-[145px] flex-col items-center justify-center rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm">
-                          <p className="!mb-0 text-sm font-semibold text-[#4F3267]">
-                            In Progress
-                          </p>
-                          <p className="!mb-0 mt-2 !text-2xl sm:!text-3xl !font-extrabold text-[#4F3267]">
-                            ₹0
-                          </p>
-                          <p className="!mb-0 mt-2 text-xs text-slate-400">
-                            0 requests
-                          </p>
+                      {/* Secure Payments Panel */}
+                      <div className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm">
+                        <div className="flex size-14 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+                          <ShieldIcon className="size-7" />
                         </div>
-
-                        {/* Card 4: Outline Frame */}
-                        <div className="min-h-[145px] rounded-2xl border border-slate-200/80 bg-white" />
+                        <p className="!mb-0 text-base font-bold text-[#4F3267]">
+                          100% Secure Payments
+                        </p>
+                        <p className="!mb-0 text-xs text-slate-500">
+                          Your payment information is encrypted and secured. We never store your
+                          card details.
+                        </p>
+                        <div className="mt-2 flex items-center gap-3">
+                          <VisaBadge className="h-6 w-10 text-[9px]" />
+                          <MastercardBadge className="h-5" />
+                          <RupayBadge className="text-xs" />
+                          <UpiBadge className="text-xs" />
+                        </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Tab Content: PAYMENT METHODS */}
-                  {activePaymentTab === 'PAYMENT METHODS' && (
-                    <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-8 text-center">
-                      <p className="!mb-0 text-base font-bold text-[#4F3267]">
-                        Saved Payment Methods
-                      </p>
-                      <p className="mt-1 text-xs text-slate-400">
-                        No saved credit/debit cards or UPI IDs.
-                      </p>
-                      <button
-                        className="mt-4 !rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 px-5 py-2 text-xs font-semibold text-white shadow transition hover:opacity-95"
-                        type="button"
-                      >
-                        + Add New Payment Method
-                      </button>
+                  {/* Tab Content: TRANSACTIONS */}
+                  {activePaymentTab === 'TRANSACTIONS' && (
+                    <div className="mt-3">
+                      <h3 className="!mb-4 !text-[1.25rem] font-bold uppercase tracking-wider text-[#4F3267]">
+                        Transaction History
+                      </h3>
+                      <div className="overflow-x-auto rounded-2xl border border-slate-200/80 bg-white shadow-sm">
+                        <table className="w-full min-w-[900px] text-left text-sm">
+                          <thead>
+                            <tr className="border-b border-slate-100 bg-slate-50/60 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                              <th className="whitespace-nowrap px-5 py-3">Order ID</th>
+                              <th className="whitespace-nowrap px-5 py-3">Date</th>
+                              <th className="whitespace-nowrap px-5 py-3">Description</th>
+                              <th className="whitespace-nowrap px-5 py-3">Payment Method</th>
+                              <th className="whitespace-nowrap px-5 py-3">Amount</th>
+                              <th className="whitespace-nowrap px-5 py-3">Status</th>
+                              <th className="px-5 py-3" />
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {(transactionPage === 1
+                              ? transactionsPageOne
+                              : transactionsPageTwo
+                            ).map((txn) => (
+                              <tr className="border-b border-slate-50 last:border-0" key={txn.id}>
+                                <td className="whitespace-nowrap px-5 py-3 font-bold text-[#4F3267]">
+                                  {txn.id}
+                                </td>
+                                <td className="whitespace-nowrap px-5 py-3 text-slate-500">
+                                  {txn.date}
+                                </td>
+                                <td className="whitespace-nowrap px-5 py-3 text-slate-700">
+                                  {txn.description}
+                                </td>
+                                <td className="whitespace-nowrap px-5 py-3 text-slate-500">
+                                  {txn.method}
+                                </td>
+                                <td className="whitespace-nowrap px-5 py-3 font-bold text-[#4F3267]">
+                                  {txn.amount}
+                                </td>
+                                <td className="px-5 py-3">
+                                  <span
+                                    className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-bold ${
+                                      txn.status === 'Success'
+                                        ? 'bg-[#DCFCE7] text-[#16A34A]'
+                                        : txn.status === 'Refunded'
+                                          ? 'bg-[#DBEAFE] text-[#2563EB]'
+                                          : 'bg-[#FFE4E6] text-[#E11D48]'
+                                    }`}
+                                  >
+                                    {txn.status}
+                                  </span>
+                                </td>
+                                <td className="px-5 py-3">
+                                  <button
+                                    className="!rounded-lg border border-purple-200 px-3 py-1 text-xs font-bold text-purple-600 transition hover:bg-purple-50"
+                                    onClick={() => setSelectedTransaction(txn)}
+                                    type="button"
+                                  >
+                                    View
+                                  </button>
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Pagination */}
+                      <div className="mt-5 flex items-center justify-center gap-2">
+                        <button
+                          className="flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-400 transition hover:bg-slate-50 disabled:opacity-40"
+                          disabled={transactionPage === 1}
+                          onClick={() => setTransactionPage(1)}
+                          type="button"
+                        >
+                          ‹
+                        </button>
+                        {[1, 2].map((page) => (
+                          <button
+                            className={`flex size-8 items-center justify-center rounded-lg text-xs font-bold transition ${
+                              transactionPage === page
+                                ? 'bg-[#4F3267] text-white'
+                                : 'border border-slate-200 text-slate-500 hover:bg-slate-50'
+                            }`}
+                            key={page}
+                            onClick={() => setTransactionPage(page)}
+                            type="button"
+                          >
+                            {page}
+                          </button>
+                        ))}
+                        <button
+                          className="flex size-8 items-center justify-center rounded-lg border border-slate-200 text-slate-400 transition hover:bg-slate-50 disabled:opacity-40"
+                          disabled={transactionPage === 2}
+                          onClick={() => setTransactionPage(2)}
+                          type="button"
+                        >
+                          ›
+                        </button>
+                      </div>
                     </div>
                   )}
 
-                  {/* Tab Content: TRANSACTION */}
-                  {activePaymentTab === 'TRANSACTION' && (
-                    <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-8 text-center">
-                      <p className="!mb-0 text-base font-bold text-[#4F3267]">
-                        Recent Transactions
-                      </p>
-                      <p className="mt-1 text-xs text-slate-400">
-                        All your payment transactions and receipts will appear here.
-                      </p>
+                  {/* Tab Content: REFUND REQUESTS */}
+                  {activePaymentTab === 'REFUND REQUESTS' && (
+                    <div className="mt-3">
+                      <h3 className="!mb-4 !text-[1.25rem] font-bold uppercase tracking-wider text-[#4F3267]">
+                        Refund Overview
+                      </h3>
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+                        {refundStats.map((stat) => (
+                          <div
+                            className="flex min-h-[145px] flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm"
+                            key={stat.id}
+                          >
+                            <div
+                              className={`flex size-10 items-center justify-center rounded-full ${stat.bgColor} ${stat.textColor}`}
+                            >
+                              <RefundStatIcon className="size-5" type={stat.icon} />
+                            </div>
+                            <p className="!mb-0 text-sm font-semibold text-[#4F3267]">
+                              {stat.title}
+                            </p>
+                            <p className="!mb-0 !text-2xl sm:!text-3xl !font-extrabold text-[#4F3267]">
+                              {stat.amount}
+                            </p>
+                            <p className="!mb-0 text-xs text-slate-400">{stat.subtext}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Refund Requests List */}
+                      <h3 className="!mb-4 mt-10 text-sm font-bold uppercase tracking-wider text-[#4F3267]">
+                        Your Refund Requests
+                      </h3>
+                      <div className="flex flex-col gap-4">
+                        {refundRequests.map((req) => (
+                          <div
+                            className="flex flex-col gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-5"
+                            key={req.id}
+                          >
+                            <div className="flex items-center gap-4">
+                              <img
+                                alt={req.title}
+                                className="size-14 shrink-0 rounded-xl object-cover"
+                                src={req.image}
+                              />
+                              <div>
+                                <p className="!mb-0 text-sm font-bold text-[#4F3267]">
+                                  {req.title}
+                                </p>
+                                <p className="!mb-0 text-xs text-slate-400">
+                                  Order ID: {req.orderId}
+                                </p>
+                                <p className="!mb-0 text-xs text-slate-400">
+                                  Requested on: {req.requestedDate}
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-wrap items-center gap-6 sm:gap-10">
+                              <div>
+                                <p className="!mb-0 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                                  Amount
+                                </p>
+                                <p className="!mb-0 text-sm font-bold text-[#4F3267]">
+                                  {req.amount}
+                                </p>
+                              </div>
+                              <div>
+                                <span className="inline-flex items-center rounded-full bg-[#DCFCE7] px-3 py-1 text-xs font-bold text-[#16A34A]">
+                                  {req.status}
+                                </span>
+                                <p className="!mb-0 mt-1 text-[11px] text-slate-400">
+                                  Refunded on: {req.refundedDate}
+                                </p>
+                              </div>
+                              <div>
+                                <p className="!mb-0 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                                  Refunded to
+                                </p>
+                                <p className="!mb-0 text-sm font-bold text-[#4F3267]">
+                                  {req.refundedTo}
+                                </p>
+                              </div>
+                              <button
+                                className="flex items-center gap-1 !rounded-lg border border-purple-200 px-3 py-1.5 text-xs font-bold text-purple-600 transition hover:bg-purple-50"
+                                onClick={() => setSelectedRefundModal(req)}
+                                type="button"
+                              >
+                                View Details <ChevronDownSmallIcon className="size-3.5 -rotate-90" />
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Need Help Bar */}
+                      <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-2xl border border-purple-100 bg-purple-50/50 p-4 sm:flex-row sm:items-center sm:p-5">
+                        <div className="flex items-center gap-3">
+                          <InfoHelpIcon className="size-6 shrink-0 text-purple-500" />
+                          <div>
+                            <p className="!mb-0 text-sm font-bold text-[#4F3267]">Need Help?</p>
+                            <p className="!mb-0 text-xs text-slate-500">
+                              If you have any questions about payments or refunds, our support
+                              team is here to help.
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          className="!rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 px-5 py-2 text-xs font-semibold text-white shadow transition hover:opacity-95 shrink-0"
+                          onClick={() => setShowSupportModal(true)}
+                          type="button"
+                        >
+                          Contact Support
+                        </button>
+                      </div>
                     </div>
                   )}
 
                   {/* Tab Content: REFUND POLICY */}
                   {activePaymentTab === 'REFUND POLICY' && (
-                    <div className="mt-8 rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8">
-                      <h3 className="!mb-3 text-base font-bold text-[#4F3267]">
-                        Lakshya Jewellery Refund Policy
+                    <div className="mt-3">
+                      <h3 className="!mb-1 !text-[1.25rem] font-bold uppercase tracking-wider text-[#4F3267]">
+                        Our Refund Policy
                       </h3>
-                      <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-slate-600 !pl-4 list-disc">
-                        <li>Refunds for returned products are processed within 5-7 working days after receipt and quality check.</li>
-                        <li>Amount will be refunded directly to the original payment source (UPI / Card / NetBanking).</li>
-                        <li>For Cash on Delivery (COD) orders, refunds are credited via NEFT/Bank Transfer to your verified account.</li>
-                        <li>Lakshya Jewellery 100% money-back guarantee applies on eligible gold and diamond items within 30 days.</li>
-                      </ul>
+                      <p className="!mb-6 text-sm text-slate-400">
+                        We want you to shop with confidence. Please read our refund policy
+                        carefully.
+                      </p>
+
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
+                        {refundPolicyCards.map((card) => (
+                          <div
+                            className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm"
+                            key={card.id}
+                          >
+                            <div className="flex size-12 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+                              {card.icon === 'returns' && <ClockIcon className="size-6" />}
+                              {card.icon === 'eligibility' && (
+                                <CheckCircleIcon className="size-6" />
+                              )}
+                              {card.icon === 'process' && <BoxIcon className="size-6" />}
+                              {card.icon === 'methods' && <ShieldIcon className="size-6" />}
+                            </div>
+                            <p className="!mb-0 text-sm font-bold text-[#4F3267]">{card.title}</p>
+                            <p className="!mb-0 text-xs text-slate-500">{card.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-6 flex flex-col items-start justify-between gap-3 rounded-2xl border border-purple-100 bg-purple-50/50 p-4 sm:flex-row sm:items-center sm:p-5">
+                        <div className="flex items-start gap-3">
+                          <InfoHelpIcon className="size-5 shrink-0 text-purple-500" />
+                          <p className="!mb-0 text-xs text-slate-600 sm:text-sm">
+                            <span className="font-bold text-[#4F3267]">Note:</span> Custom made,
+                            engraved or personalized jewellery are not eligible for returns unless
+                            received damaged or defective.
+                          </p>
+                        </div>
+                        <a
+                          className="flex shrink-0 items-center gap-1 text-xs font-bold text-purple-600 transition hover:text-purple-800 sm:text-sm"
+                          href="#"
+                        >
+                          Read Full Policy <ArrowRightIconSmall className="size-3.5" />
+                        </a>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -851,7 +1529,7 @@ function SignInPage() {
                                   </div>
 
                                   {/* Progress Bar Timeline */}
-                                  <div className="mt-5 px-2">
+                                  <div className="mt-4 px-2">
                                     <div className="relative flex items-center justify-between">
                                       {/* Connecting Lines */}
                                       <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex items-center -z-0">
@@ -1257,6 +1935,223 @@ function SignInPage() {
                   >
                     Close
                   </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Transaction Details Modal */}
+          {selectedTransaction && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
+              <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-2xl animate-fade-in">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <h3 className="!mb-0 text-lg font-bold text-[#4F3267]">
+                    Transaction Details
+                  </h3>
+                  <button
+                    className="text-slate-400 hover:text-slate-600 transition"
+                    onClick={() => setSelectedTransaction(null)}
+                    type="button"
+                  >
+                    <CloseIconModal className="size-5" />
+                  </button>
+                </div>
+                <div className="mt-4 space-y-3 text-sm">
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Order ID:</span>
+                    <span className="font-bold text-[#4F3267]">{selectedTransaction.id}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Date:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedTransaction.date}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Description:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedTransaction.description}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Payment Method:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedTransaction.method}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Amount:</span>
+                    <span className="text-base font-extrabold text-[#4F3267]">
+                      {selectedTransaction.amount}
+                    </span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-slate-500">Status:</span>
+                    <span
+                      className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-bold ${
+                        selectedTransaction.status === 'Success'
+                          ? 'bg-[#DCFCE7] text-[#16A34A]'
+                          : selectedTransaction.status === 'Refunded'
+                            ? 'bg-[#DBEAFE] text-[#2563EB]'
+                            : 'bg-[#FFE4E6] text-[#E11D48]'
+                      }`}
+                    >
+                      {selectedTransaction.status}
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <button
+                    className="!rounded-lg bg-[#4F3267] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#3d2452]"
+                    onClick={() => setSelectedTransaction(null)}
+                    type="button"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Refund Request Details Modal */}
+          {selectedRefundModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
+              <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl animate-fade-in">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <h3 className="!mb-0 text-lg font-bold text-[#4F3267]">
+                    Refund Details: {selectedRefundModal.orderId}
+                  </h3>
+                  <button
+                    className="text-slate-400 hover:text-slate-600 transition"
+                    onClick={() => setSelectedRefundModal(null)}
+                    type="button"
+                  >
+                    <CloseIconModal className="size-5" />
+                  </button>
+                </div>
+                <div className="mt-4 space-y-3 text-sm">
+                  <div className="flex items-center gap-3 border-b border-slate-50 pb-3">
+                    <img
+                      alt={selectedRefundModal.title}
+                      className="size-12 rounded-lg object-cover"
+                      src={selectedRefundModal.image}
+                    />
+                    <div>
+                      <p className="!mb-0 font-bold text-[#4F3267]">
+                        {selectedRefundModal.title}
+                      </p>
+                      <p className="!mb-0 text-xs text-slate-400">
+                        {selectedRefundModal.methodType}
+                      </p>
+                    </div>
+                  </div>
+                  {selectedRefundModal.items?.map((item) => (
+                    <div className="flex justify-between text-xs text-slate-500" key={item.name}>
+                      <span>
+                        {item.name} × {item.qty}
+                      </span>
+                      <span className="font-semibold text-slate-700">{item.price}</span>
+                    </div>
+                  ))}
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Refund Amount:</span>
+                    <span className="text-base font-extrabold text-emerald-600">
+                      {selectedRefundModal.amount}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Status:</span>
+                    <span className="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-bold text-emerald-700">
+                      {selectedRefundModal.status}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Refunded To:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedRefundModal.refundedTo}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">Refunded On:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedRefundModal.refundedDate}
+                    </span>
+                  </div>
+                  <div className="flex justify-between border-b border-slate-50 py-2">
+                    <span className="text-slate-500">ARN:</span>
+                    <span className="font-semibold text-slate-700">
+                      {selectedRefundModal.arn}
+                    </span>
+                  </div>
+                  <div className="pt-1">
+                    <p className="text-xs font-semibold uppercase text-slate-400 !mb-1">
+                      Reason
+                    </p>
+                    <p className="text-xs text-slate-600">{selectedRefundModal.reason}</p>
+                  </div>
+                </div>
+                <div className="mt-6 flex justify-end">
+                  <button
+                    className="!rounded-lg bg-[#4F3267] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#3d2452]"
+                    onClick={() => setSelectedRefundModal(null)}
+                    type="button"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Contact Support Modal */}
+          {showSupportModal && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
+              <div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl animate-fade-in">
+                <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                  <h3 className="!mb-0 text-lg font-bold text-[#4F3267]">Contact Support</h3>
+                  <button
+                    className="text-slate-400 hover:text-slate-600 transition"
+                    onClick={() => setShowSupportModal(false)}
+                    type="button"
+                  >
+                    <CloseIconModal className="size-5" />
+                  </button>
+                </div>
+                <div className="mt-4 flex flex-col gap-3 text-sm">
+                  <a
+                    className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:bg-slate-50"
+                    href="tel:+914442935000"
+                  >
+                    <PhoneSupportIcon className="size-5 text-purple-600" />
+                    <div>
+                      <p className="!mb-0 font-semibold text-[#4F3267]">Call Us</p>
+                      <p className="!mb-0 text-xs text-slate-500">+91 44 4293 5000</p>
+                    </div>
+                  </a>
+                  <a
+                    className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:bg-slate-50"
+                    href="mailto:support@lakshyajewellery.com"
+                  >
+                    <MailSupportIcon className="size-5 text-purple-600" />
+                    <div>
+                      <p className="!mb-0 font-semibold text-[#4F3267]">Email Us</p>
+                      <p className="!mb-0 text-xs text-slate-500">
+                        support@lakshyajewellery.com
+                      </p>
+                    </div>
+                  </a>
+                  <a
+                    className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:bg-slate-50"
+                    href="https://wa.me/914442935000"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <WhatsAppIcon className="size-5 text-purple-600" />
+                    <div>
+                      <p className="!mb-0 font-semibold text-[#4F3267]">WhatsApp</p>
+                      <p className="!mb-0 text-xs text-slate-500">Chat with our team</p>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
