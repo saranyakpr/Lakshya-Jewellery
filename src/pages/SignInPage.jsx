@@ -88,15 +88,6 @@ function ProgressCircleIcon(props) {
   )
 }
 
-function RejectedCrossIcon(props) {
-  return (
-    <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
-      <circle cx="12" cy="12" r="9" />
-      <path strokeLinecap="round" strokeLinejoin="round" d="m15 9-6 6m0-6 6 6" />
-    </svg>
-  )
-}
-
 function InfoHelpIcon(props) {
   return (
     <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" {...props}>
@@ -190,11 +181,27 @@ function ClockIcon(props) {
   )
 }
 
+function XMarkIcon(props) {
+  return (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2.5"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  )
+}
+
 function RefundStatIcon({ type, className }) {
   if (type === 'total') return <WalletIcon className={className} />
-  if (type === 'approved') return <CheckCircleIcon className={className} />
+  if (type === 'approved') return <CheckIconSmall className={className} />
   if (type === 'in-progress') return <ClockIcon className={className} />
-  if (type === 'rejected') return <RejectedCrossIcon className={className} />
+  if (type === 'rejected') return <XMarkIcon className={className} />
   return null
 }
 
@@ -551,8 +558,7 @@ const refundStats = [
     title: 'Total Refunds',
     amount: '₹2,450',
     subtext: 'Across 3 requests',
-    bgColor: 'bg-[#EDE9FE]',
-    textColor: 'text-[#7C3AED]',
+    iconBg: 'bg-[#8B5CF6]',
     icon: 'total',
   },
   {
@@ -560,8 +566,7 @@ const refundStats = [
     title: 'Approved',
     amount: '₹2,450',
     subtext: '3 requests',
-    bgColor: 'bg-[#DCFCE7]',
-    textColor: 'text-[#16A34A]',
+    iconBg: 'bg-[#22C55E]',
     icon: 'approved',
   },
   {
@@ -569,8 +574,7 @@ const refundStats = [
     title: 'In Progress',
     amount: '₹0',
     subtext: '0 requests',
-    bgColor: 'bg-[#FFEDD5]',
-    textColor: 'text-[#EA580C]',
+    iconBg: 'bg-[#F97316]',
     icon: 'in-progress',
   },
   {
@@ -578,8 +582,7 @@ const refundStats = [
     title: 'Rejected',
     amount: '₹0',
     subtext: '0 requests',
-    bgColor: 'bg-[#FFE4E6]',
-    textColor: 'text-[#E11D48]',
+    iconBg: 'bg-[#EF4444]',
     icon: 'rejected',
   },
 ]
@@ -590,7 +593,7 @@ const initialPaymentMethods = [
     brand: 'visa',
     label: 'Visa ending in 4242',
     detail: 'Expires 12/26',
-    holder: 'Sri Shakthi',
+    holder: 'User',
     isDefault: true,
   },
   {
@@ -598,7 +601,7 @@ const initialPaymentMethods = [
     brand: 'upi',
     label: 'UPI ID',
     detail: 'shakthi235@okaxis',
-    holder: 'Sri Shakthi',
+    holder: 'User',
     isDefault: false,
   },
 ]
@@ -769,8 +772,8 @@ function SignInPage() {
   // Profile Form State
   const [profile, setProfile] = useState({
     dateOfBirth: '1998-05-12',
-    email: 'srishakthimoorthy235@gmail.com',
-    fullName: 'Sri Shakthi',
+    email: 'user@gmail.com',
+    fullName: 'User',
     gender: 'Female',
     mobileNumber: '+91 98765 43210',
     occupation: 'Software Developer',
@@ -991,7 +994,7 @@ function SignInPage() {
                 <div className="w-full">
                   {/* Page Title & Subtitle */}
                   <div>
-                    <h1 className="!mb-0 !text-xl sm:!text-2xl !font-bold text-[#4F3267]">
+                    <h1 className="!mb-0 !text-xl sm:!text-2xl !font-bold !text-[#4F3267]">
                       My Profile
                     </h1>
                     <p className="!mb-0 mt-1 text-sm text-slate-400">
@@ -1000,7 +1003,7 @@ function SignInPage() {
                   </div>
 
                   {/* Profile Tab Navigation */}
-                  <div className="mt-8 flex gap-6 sm:gap-8 border-b border-slate-200 overflow-x-auto no-scrollbar">
+                  <div className="mt-4 flex gap-6 sm:gap-8 border-b border-slate-200 overflow-x-auto no-scrollbar">
                     {profileTabs.map((tab) => (
                       <button
                         className={`-mb-px flex items-center gap-1.5 border-b-2 pb-3 text-xs sm:text-sm !font-bold whitespace-nowrap transition ${
@@ -1024,8 +1027,8 @@ function SignInPage() {
                       {/* Left Column */}
                       <div className="flex flex-col gap-6 lg:col-span-2">
                         {/* Personal Information Card */}
-                        <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6">
-                          <h3 className="!mb-5 text-base font-bold text-[#4F3267]">
+                        <div className="rounded-2xl border border-slate-200/80 bg-white p-3 shadow-sm sm:p-6">
+                          <h3 className="!mb-5 !text-base !font-bold !text-[#4F3267]">
                             Personal Information
                           </h3>
 
@@ -1043,7 +1046,7 @@ function SignInPage() {
                                 {avatarImage ? (
                                   <img
                                     alt={fullName}
-                                    className="size-16 rounded-full object-cover shadow-sm"
+                                    className="!size-30 rounded-full object-cover shadow-sm"
                                     src={avatarImage}
                                   />
                                 ) : (
@@ -1139,7 +1142,7 @@ function SignInPage() {
                                     type="date"
                                     value={profile.dateOfBirth}
                                   />
-                                  <CalendarIcon className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
+                                  {/* <CalendarIcon className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-400" /> */}
                                 </div>
                               </div>
                               <div>
@@ -1599,27 +1602,31 @@ function SignInPage() {
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
                         {refundStats.map((stat) => (
                           <div
-                            className="flex min-h-[100px] flex-col items-center justify-center gap-1 rounded-2xl border border-slate-200/80 bg-white pt-2 pb-2 text-center shadow-sm"
+                            className="flex min-h-[110px] flex-col gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm"
                             key={stat.id}
                           >
-                            <div
-                              className={`flex size-10 items-center justify-center rounded-full ${stat.bgColor} ${stat.textColor}`}
-                            >
-                              <RefundStatIcon className="size-5" type={stat.icon} />
+                            <div className="flex gap-2.5">
+                              <div
+                                className={`flex size-9 shrink-0 items-center justify-center rounded-full text-white ${stat.iconBg}`}
+                              >
+                                <RefundStatIcon className="size-4" type={stat.icon} />
+                              </div>
+                                <div>
+                                  <span className="text-sm font-semibold text-slate-500">
+                                    {stat.title}
+                                  </span>
+                                  <p className="!mb-0 !text-2xl !font-extrabold text-[#4F3267]">
+                                  {stat.amount}
+                                </p>
+                                <p className="!mb-0 text-xs text-slate-400">{stat.subtext}</p>
+                              </div>
                             </div>
-                            <p className="!mb-0 text-sm font-semibold text-[#4F3267]">
-                              {stat.title}
-                            </p>
-                            <p className="!mb-0 !text-xl sm:!text-xl !font-extrabold text-[#4F3267]">
-                              {stat.amount}
-                            </p>
-                            <p className="!mb-0 text-xs text-slate-400">{stat.subtext}</p>
                           </div>
                         ))}
                       </div>
 
                       {/* Refund Requests List */}
-                      <h3 className="!mb-4 mt-10 text-sm font-bold uppercase tracking-wider text-[#4F3267]">
+                      <h3 className="!mb-4 mt-3 mt-10 !text-[1.1rem] !font-bold tracking-wider !text-[#4F3267]">
                         Your Refund Requests
                       </h3>
                       <div className="flex flex-col gap-4">
