@@ -771,7 +771,7 @@ function SignInPage() {
 
   // Profile Form State
   const [profile, setProfile] = useState({
-    dateOfBirth: '1998-05-12',
+    dateOfBirth: '12 May 1998',
     email: 'user@gmail.com',
     fullName: 'User',
     gender: 'Female',
@@ -1039,171 +1039,174 @@ function SignInPage() {
                             </div>
                           )}
 
-                          <form className="flex flex-col gap-5" onSubmit={handleSaveProfile}>
-                            <div className="flex flex-col items-start gap-5 sm:flex-row">
-                              {/* Avatar */}
-                              <div className="flex shrink-0 flex-col items-center">
-                                {avatarImage ? (
-                                  <img
-                                    alt={fullName}
-                                    className="!size-30 rounded-full object-cover shadow-sm"
-                                    src={avatarImage}
-                                  />
-                                ) : (
-                                  <div className="flex size-16 items-center justify-center rounded-full bg-purple-100">
-                                    <span className="select-none text-2xl font-bold text-purple-600">
-                                      {getInitials()}
-                                    </span>
-                                  </div>
-                                )}
-                                <input
-                                  accept="image/*"
-                                  className="hidden"
-                                  onChange={handlePhotoUpload}
-                                  ref={fileInputRef}
-                                  type="file"
+                          <form className="flex flex-col gap-5 sm:flex-row" onSubmit={handleSaveProfile}>
+                            {/* Avatar */}
+                            <div className="flex shrink-0 flex-col items-center">
+                              {avatarImage ? (
+                                <img
+                                  alt={fullName}
+                                  className="size-30 rounded-full object-cover shadow-sm"
+                                  src={avatarImage}
                                 />
-                                <button
-                                  className="mt-3 inline-flex items-center gap-1.5 !rounded-lg border border-purple-200 px-3 py-1.5 text-xs font-semibold text-purple-600 transition hover:bg-purple-50"
-                                  onClick={() => fileInputRef.current?.click()}
-                                  type="button"
-                                >
-                                  <CameraIcon className="size-3.5" /> Change Photo
-                                </button>
-                              </div>
+                              ) : (
+                                <div className="flex size-30 items-center justify-center rounded-full bg-purple-100">
+                                  <span className="select-none text-5xl font-bold text-purple-600">
+                                    {getInitials()}
+                                  </span>
+                                </div>
+                              )}
+                              <input
+                                accept="image/*"
+                                className="hidden"
+                                onChange={handlePhotoUpload}
+                                ref={fileInputRef}
+                                type="file"
+                              />
+                              <button
+                                className="mt-3 inline-flex items-center gap-1.5 whitespace-nowrap !rounded-lg border border-purple-200 px-3 py-1.5 !text-xs font-semibold text-purple-600 transition hover:bg-purple-50"
+                                onClick={() => fileInputRef.current?.click()}
+                                type="button"
+                              >
+                                <CameraIcon className="size-3.5" /> Change Photo
+                              </button>
+                            </div>
 
+                            {/* Fields */}
+                            <div className="flex flex-1 flex-col gap-3">
                               {/* Full Name */}
-                              <div className="w-full flex-1">
-                                <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
+                              <div>
+                                <label className="!mb-1.5 block text-sm font-medium text-slate-700">
                                   Full Name
                                 </label>
                                 <input
-                                  className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                  className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
                                   onChange={(e) => handleInputChange('fullName', e.target.value)}
                                   required
                                   type="text"
                                   value={profile.fullName}
                                 />
                               </div>
-                            </div>
 
-                            {/* Email Address */}
-                            <div>
-                              <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                Email Address
-                              </label>
-                              <div className="flex items-center gap-3">
-                                <input
-                                  className="w-full flex-1 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                  onChange={(e) => handleInputChange('email', e.target.value)}
-                                  required
-                                  type="email"
-                                  value={profile.email}
-                                />
-                                <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#DCFCE7] px-2.5 py-1 text-[11px] font-bold text-[#16A34A]">
-                                  <CheckIconSmall className="size-3" /> Verified
-                                </span>
-                              </div>
-                            </div>
-
-                            {/* Mobile Number */}
-                            <div>
-                              <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                Mobile Number
-                              </label>
-                              <div className="flex items-center gap-3">
-                                <input
-                                  className="w-full flex-1 rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                  onChange={(e) =>
-                                    handleInputChange('mobileNumber', e.target.value)
-                                  }
-                                  required
-                                  type="tel"
-                                  value={profile.mobileNumber}
-                                />
-                                <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#DCFCE7] px-2.5 py-1 text-[11px] font-bold text-[#16A34A]">
-                                  <CheckIconSmall className="size-3" /> Verified
-                                </span>
-                              </div>
-                            </div>
-
-                            {/* Date of Birth + Gender */}
-                            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                              {/* Email Address */}
                               <div>
-                                <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                  Date of Birth
+                                <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                  Email Address
                                 </label>
                                 <div className="relative">
                                   <input
-                                    className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                    onChange={(e) =>
-                                      handleInputChange('dateOfBirth', e.target.value)
-                                    }
-                                    type="date"
-                                    value={profile.dateOfBirth}
+                                    className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 pr-28 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                    onChange={(e) => handleInputChange('email', e.target.value)}
+                                    required
+                                    type="email"
+                                    value={profile.email}
                                   />
-                                  {/* <CalendarIcon className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-400" /> */}
+                                  <span className="absolute right-2.5 top-1/2 inline-flex -translate-y-1/2 items-center gap-1 rounded bg-[#DCFCE7] px-2.5 py-1 text-[11px] font-bold text-[#16A34A]">
+                                    <CheckIconSmall className="size-3" /> Verified
+                                  </span>
                                 </div>
                               </div>
+
+                              {/* Mobile Number */}
                               <div>
-                                <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                  Gender
+                                <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                  Mobile Number
                                 </label>
-                                <select
-                                  className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                  onChange={(e) => handleInputChange('gender', e.target.value)}
-                                  value={profile.gender}
-                                >
-                                  <option value="Female">Female</option>
-                                  <option value="Male">Male</option>
-                                  <option value="Other">Other</option>
-                                  <option value="Prefer not to say">Prefer not to say</option>
-                                </select>
+                                <div className="relative">
+                                  <input
+                                    className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 pr-28 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                    onChange={(e) =>
+                                      handleInputChange('mobileNumber', e.target.value)
+                                    }
+                                    required
+                                    type="tel"
+                                    value={profile.mobileNumber}
+                                  />
+                                  <span className="absolute right-2.5 top-1/2 inline-flex -translate-y-1/2 items-center gap-1 rounded bg-[#DCFCE7] px-2.5 py-1 text-[11px] font-bold text-[#16A34A]">
+                                    <CheckIconSmall className="size-3" /> Verified
+                                  </span>
+                                </div>
                               </div>
-                            </div>
 
-                            {/* PAN Number */}
-                            <div>
-                              <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                PAN Number (Optional)
-                              </label>
-                              <input
-                                className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                onChange={(e) => handleInputChange('panNumber', e.target.value)}
-                                type="text"
-                                value={profile.panNumber}
-                              />
-                            </div>
+                              {/* Date of Birth + Gender */}
+                              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                                <div>
+                                  <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                    Date of Birth
+                                  </label>
+                                  <div className="relative">
+                                    <input
+                                      className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 pr-10 !text-sm !text-slate-800 !shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                      onChange={(e) =>
+                                        handleInputChange('dateOfBirth', e.target.value)
+                                      }
+                                      type="text"
+                                      value={profile.dateOfBirth}
+                                    />
+                                    <CalendarIcon className="pointer-events-none absolute right-3.5 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
+                                  </div>
+                                </div>
+                                <div>
+                                  <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                    Gender
+                                  </label>
+                                  <select
+                                    className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 !text-sm !text-slate-800 !shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                    onChange={(e) => handleInputChange('gender', e.target.value)}
+                                    value={profile.gender}
+                                  >
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Prefer not to say">Prefer not to say</option>
+                                  </select>
+                                </div>
+                              </div>
 
-                            {/* Occupation */}
-                            <div>
-                              <label className="!mb-1.5 block text-xs font-bold uppercase tracking-wider text-[#4F3267]">
-                                Occupation (Optional)
-                              </label>
-                              <input
-                                className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
-                                onChange={(e) => handleInputChange('occupation', e.target.value)}
-                                type="text"
-                                value={profile.occupation}
-                              />
-                            </div>
+                              {/* PAN Number */}
+                              <div>
+                                <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                  PAN Number (Optional)
+                                </label>
+                                <input
+                                  className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 !text-sm !text-slate-800 !shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                  onChange={(e) => handleInputChange('panNumber', e.target.value)}
+                                  type="text"
+                                  value={profile.panNumber}
+                                />
+                              </div>
 
-                            {/* Save Changes Button */}
-                            <div>
-                              <button
-                                className="!rounded-lg bg-[#4F3267] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#3d2452] active:scale-[0.98]"
-                                type="submit"
-                              >
-                                Save Changes
-                              </button>
+                              {/* Occupation */}
+                              <div>
+                                <label className="!mb-1.5 block text-sm font-medium text-slate-700">
+                                  Occupation (Optional)
+                                </label>
+                                <input
+                                  className="w-full rounded-lg border border-slate-200 bg-white px-3.5 py-1.5 !text-sm !text-slate-800 !shadow-sm transition focus:border-[#4F3267] focus:outline-none focus:ring-1 focus:ring-[#4F3267]"
+                                  onChange={(e) =>
+                                    handleInputChange('occupation', e.target.value)
+                                  }
+                                  type="text"
+                                  value={profile.occupation}
+                                />
+                              </div>
+
+                              {/* Save Changes Button */}
+                              <div>
+                                <button
+                                  className="!rounded-lg bg-[#4F3267] px-6 py-2.5 !text-sm !font-semibold text-white shadow-md transition hover:bg-[#3d2452] active:scale-[0.98]"
+                                  type="submit"
+                                >
+                                  Save Changes
+                                </button>
+                              </div>
                             </div>
                           </form>
                         </div>
 
                         {/* Recent Order Card */}
-                        <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6">
+                        <div className="rounded-2xl border border-slate-200/80 bg-white p-3 shadow-sm sm:p-6">
                           <div className="flex items-center justify-between">
-                            <h3 className="!mb-0 text-base font-bold text-[#4F3267]">
+                            <h3 className="!mb-0 !text-base !font-bold !text-[#4F3267]">
                               Recent Order
                             </h3>
                             <button
@@ -1255,20 +1258,20 @@ function SignInPage() {
                       {/* Right Column */}
                       <div className="flex flex-col gap-6">
                         {/* Account Summary Card */}
-                        <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6">
-                          <h3 className="!mb-2 text-base font-bold text-[#4F3267]">
+                        <div className="rounded-2xl border border-slate-200/80 bg-white p-3 shadow-sm sm:p-6">
+                          <h3 className="!mb-2 !text-base !font-bold !text-[#4F3267]">
                             Account Summary
                           </h3>
                           <div className="flex flex-col divide-y divide-slate-100">
                             {accountSummaryItems.map((item) => (
                               <button
-                                className="flex items-center justify-between gap-3 py-3 text-left transition hover:bg-slate-50"
+                                className="flex items-center justify-between gap-3 py-2 text-left transition hover:bg-slate-50"
                                 key={item.id}
                                 onClick={() => handleAccountSummaryClick(item.id)}
                                 type="button"
                               >
                                 <div className="flex items-center gap-3">
-                                  <div className="flex size-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+                                  <div className="flex size-9 items-center justify-center rounded bg-purple-100 text-purple-600">
                                     <AccountSummaryIcon className="size-4" type={item.icon} />
                                   </div>
                                   <span className="text-sm font-semibold text-slate-600">
@@ -1291,20 +1294,20 @@ function SignInPage() {
                         </div>
 
                         {/* Quick Actions Card */}
-                        <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm sm:p-6">
-                          <h3 className="!mb-2 text-base font-bold text-[#4F3267]">
+                        <div className="rounded-2xl border border-slate-200/80 bg-white p-3 shadow-sm sm:p-6">
+                          <h3 className="!mb-2 !text-base !font-bold !text-[#4F3267]">
                             Quick Actions
                           </h3>
                           <div className="flex flex-col divide-y divide-slate-100">
                             {quickActionItems.map((item) => (
                               <button
-                                className="flex items-center justify-between gap-3 py-3 text-left transition hover:bg-slate-50"
+                                className="flex items-center justify-between gap-3 py-2 text-left transition hover:bg-slate-50"
                                 key={item.id}
                                 onClick={() => handleQuickActionClick(item.id)}
                                 type="button"
                               >
                                 <div className="flex items-center gap-3">
-                                  <div className="flex size-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+                                  <div className="flex size-9 items-center justify-center rounded bg-purple-100 text-purple-600">
                                     <AccountSummaryIcon className="size-4" type={item.icon} />
                                   </div>
                                   <div>
@@ -1728,10 +1731,10 @@ function SignInPage() {
                       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
                         {refundPolicyCards.map((card) => (
                           <div
-                            className="flex flex-col items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm"
+                            className="flex flex-col items-center gap-2 rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-sm"
                             key={card.id}
                           >
-                            <div className="flex size-12 items-center justify-center rounded-full bg-purple-50 text-purple-600">
+                            <div className="flex size-12 items-center justify-center rounded bg-purple-100 text-purple-600">
                               {card.icon === 'returns' && <ClockIcon className="size-6" />}
                               {card.icon === 'eligibility' && (
                                 <CheckCircleIcon className="size-6" />
