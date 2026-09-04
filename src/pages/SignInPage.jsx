@@ -19,12 +19,17 @@ function SignInPage() {
     setTimeout(() => setActionNotice(null), duration)
   }
 
+  const goToNavItem = (id) => {
+    setActiveNavItem(id)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   const handleNavItemClick = (item) => {
     if (item.link) {
       navigate(item.link)
       return
     }
-    setActiveNavItem(item.id)
+    goToNavItem(item.id)
   }
 
   const fullName = profile.fullName || 'Admin'
@@ -50,15 +55,15 @@ function SignInPage() {
             </div>
           )}
 
-          <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
             {/* Sidebar Navigation */}
-            <aside className="w-full shrink-0 lg:w-64">
+            <aside className="w-full shrink-0 lg:sticky lg:top-6 lg:w-64 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto lg:pr-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               <div className="rounded-xl border border-slate-100 bg-slate-50/50 p-4 sm:p-5 lg:border-0 lg:bg-transparent lg:p-0">
                 <p className="!mb-0 !text-[1.05rem] !font-bold text-[#4F3267]">{fullName}</p>
                 <p className="!mb-0 text-sm text-slate-500">{profile.email || 'user@gmail.com'}</p>
                 <button
                   className="mt-1.5 inline-block !text-xs font-bold text-purple-600 hover:text-purple-800 transition"
-                  onClick={() => setActiveNavItem('profile')}
+                  onClick={() => goToNavItem('profile')}
                   type="button"
                 >
                   Edit Profile
@@ -100,9 +105,9 @@ function SignInPage() {
             <div className="flex-1 min-w-0">
               {activeNavItem === 'profile' && (
                 <ProfileTab
-                  onGoToOrders={() => setActiveNavItem('orders')}
-                  onGoToPayment={() => setActiveNavItem('payment')}
-                  onGoToRewards={() => setActiveNavItem('xclusive')}
+                  onGoToOrders={() => goToNavItem('orders')}
+                  onGoToPayment={() => goToNavItem('payment')}
+                  onGoToRewards={() => goToNavItem('xclusive')}
                   profile={profile}
                   setProfile={setProfile}
                 />
@@ -120,7 +125,7 @@ function SignInPage() {
                       navGroups.flatMap((g) => g.items).find((i) => i.id === activeNavItem)
                         ?.label || 'Account'
                     }
-                    onGoToProfile={() => setActiveNavItem('profile')}
+                    onGoToProfile={() => goToNavItem('profile')}
                   />
                 )}
             </div>
